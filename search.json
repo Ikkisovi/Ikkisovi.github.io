@@ -1,0 +1,449 @@
+[
+  {
+    "objectID": "q1.html",
+    "href": "q1.html",
+    "title": "SumExceptation",
+    "section": "",
+    "text": "Sums of geometric distribution",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "SumExceptation"
+    ]
+  },
+  {
+    "objectID": "L11-13.html",
+    "href": "L11-13.html",
+    "title": "Confidence Interval",
+    "section": "",
+    "text": "assume \\(\\mu_\\bar{X}=\\mu_0\\), with sample size n&gt;=30, we are expected to conduct z test.",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "L11-13.html#rejection-region",
+    "href": "L11-13.html#rejection-region",
+    "title": "Confidence Interval",
+    "section": "Rejection Region",
+    "text": "Rejection Region\n\n\\(P((-z_{crit}&lt;Z&lt;z_{crit})) = 1 -a\\)",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "L11-13.html#p-value-approach",
+    "href": "L11-13.html#p-value-approach",
+    "title": "Confidence Interval",
+    "section": "P-Value Approach",
+    "text": "P-Value Approach\n\nIf \\(p-value &lt; a\\), we reject \\(H_0\\)",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "L11-13.html#t-test",
+    "href": "L11-13.html#t-test",
+    "title": "Confidence Interval",
+    "section": "T Test",
+    "text": "T Test\n\nT test has fatter tails\nt_n-1",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "L11-13.html#assumptions",
+    "href": "L11-13.html#assumptions",
+    "title": "Confidence Interval",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nFor Population Mean\n\nNormality, if sample size not &gt;30\nqqnorm in R checks normality if knows raw data. If no, checks outliers and if everything within 2.5 SD of the mean\nIndependence of observations\n\n\n\nFor Proportions\n\nSimple random sample, independence\n\\(np&gt;=10\\), and \\(n(1-p)&gt;=10\\)",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "L11-13.html#critical-value-approach",
+    "href": "L11-13.html#critical-value-approach",
+    "title": "Confidence Interval",
+    "section": "Critical Value Approach",
+    "text": "Critical Value Approach\nReject when obs. test stat falls in Rejection Region &gt;(1-a), lower.tail=FALSE\n\nqt(0.025,df=99,lower.tail = FALSE) ##True critical value, if founded t testistic &gt; this, reject the null hypothesis\n\n[1] 1.984217",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "L11-13.html#p-value-approach-1",
+    "href": "L11-13.html#p-value-approach-1",
+    "title": "Confidence Interval",
+    "section": "P-Value Approach",
+    "text": "P-Value Approach\n\nReject if p-value &lt; a\nIt is one tail\nFor example, assuming T test stat = 6.33, \\(t_{19,0.005}=2.712\\), p value &lt; 0.005, and of course reject null hypothesis",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "L11-13.html#chi-square",
+    "href": "L11-13.html#chi-square",
+    "title": "Confidence Interval",
+    "section": "Chi Square",
+    "text": "Chi Square\n\n\\[\n\\frac{(n-1)S^2}{\\sigma^2} \\sim \\chi^2_{n-1}\n\\]only if random samples from normal populations, and sigma square is known\n\\(\\frac{a}{2}\\) on both tails if two tails hypothesis, \\(a\\) and \\(1-a\\) p value on right or left tail\n2*pchisq(X^2_obs,df=n-1,LT=F), pchisq(X^2_obs,df=n-1,LT=F),pchisq(X^2_obs,df=n-1,LT= T)",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Confidence Interval"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I love boobs.\nI bench 70KG + squat 110KG + dead lift 120KG = 300KG"
+  },
+  {
+    "objectID": "CourseMaterial.html",
+    "href": "CourseMaterial.html",
+    "title": "CourseMaterial-Stochastic-Process",
+    "section": "",
+    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseMaterial-Stochastic-Process"
+    ]
+  },
+  {
+    "objectID": "CourseMaterial.html#table-of-content",
+    "href": "CourseMaterial.html#table-of-content",
+    "title": "CourseMaterial-Stochastic-Process",
+    "section": "",
+    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseMaterial-Stochastic-Process"
+    ]
+  },
+  {
+    "objectID": "FinalProject.html",
+    "href": "FinalProject.html",
+    "title": "Final Project",
+    "section": "",
+    "text": "Welcome, my final project is about applying DeGroot Learning model on banking dataset availiable in Kaggle, and then using simulations to count and occurence and calculate the transition probability, finally, calculate the stationary distribution on the markov chain object.",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Final Project"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html",
+    "href": "Q1-2.html",
+    "title": "Q1-2",
+    "section": "",
+    "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#quant-interview-questions",
+    "href": "Q1-2.html#quant-interview-questions",
+    "title": "Q1-2",
+    "section": "",
+    "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q1",
+    "href": "Q1-2.html#q1",
+    "title": "Q1-2",
+    "section": "Q1",
+    "text": "Q1\nPut options with strikes 30 and 20 on the same underlying asset and with the same maturity are trading for $6 and $4, respectively. Can you find an arbitrage?\nAnswer:- CFA I, key words:option, portfolio,strike",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q2",
+    "href": "Q1-2.html#q2",
+    "title": "Q1-2",
+    "section": "Q2",
+    "text": "Q2\nThe number \\(2^{29}\\) has 9 digits, all different. Without computing \\(2^{29}\\), find the missing digit.\nAnswer:- Key words: Combinations theory, number theory, recall:\n\\[\n9 \\mid n- D(n)\n\\] which sum of all its digits is divisible by 9, thus we have:\n\\[\n9 \\mid 2^{29}- D(2^{29})\n\\]\n\\[\n9 \\mid \\sum_{j=0}^9 j -D(2^{29})\n\\]",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q3-tower-rule",
+    "href": "Q1-2.html#q3-tower-rule",
+    "title": "Q1-2",
+    "section": "Q3 Tower Rule",
+    "text": "Q3 Tower Rule\nException of \\(\\Phi(X+a)\\), assume another \\(Y\\sim N(0,1)\\), such that \\(\\Phi(X+a)= P(Y&lt;X+a)\\) , take its expectation:\n\\[\nE_x(\\Phi(X+a)) = E_x(P(Y&lt;X+a)|x)\n\\]\nSince X,Y are independent, we can apply the tower rule:\n\\[\n\\begin{align}\n=P(Y&lt;X+a)=P(Y-X&lt;a)\\\\ =P(\\frac{Y-X}{\\sqrt 2} &lt; \\frac{a}{\\sqrt 2} ) \\\\\n= \\Phi(\\frac{a}{\\sqrt{2}})\n\\end{align}\n\\]",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q4-throw-coins-dices",
+    "href": "Q1-2.html#q4-throw-coins-dices",
+    "title": "Q1-2",
+    "section": "Q4 Throw Coins, dices",
+    "text": "Q4 Throw Coins, dices\nThrow coins can be converted to a markov chain question, Expected step to recurrent states\ndraw a graph solving this: Expected number of throwing HHH sequence:\n\\[\n\\begin{align}\nu_0=0.5(1+u_0)+0.5(1+u_1)=1+0.5u_0+0.5u_1 \\\\\nu_1 =0.5(1+u_0)+0.5(1+u_2)\\\\\nu_2 = 0.5(1+u_0+0.5)\n\\end{align}\n\\]\nNote, u_0 are steps from that state to the recurrent state.\nTo understand this, think about u_0 first, 0.5(1+u_0) means, there’s 0.5 chance the first throw is not H, hence waste this step, and plus itself step u_0, and 0.5(1+u_1) is assuming the first toss is H already, we are remaining u_1 step, due to 0.5+0.5 =1 has to be, there’s no terms for u_2.\n\nDices\nExpected sum for throwing 6 side dices, until the first 1 is appear.\nthoughts: Dice is a discrete uniform distribution. Using Law of total expectation could find the expected tosses of getting a 1:\n\\[\nE = \\frac{1}{6}*0+ \\frac{5}{6}(1+E)\n\\]",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html",
+    "href": "GaussianProcess.html",
+    "title": "Gaussian Process",
+    "section": "",
+    "text": "Examples on classification research,change point test. Using non-parametric method first, then with bigger sample size to apply CLT.",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html#normal-distribution",
+    "href": "GaussianProcess.html#normal-distribution",
+    "title": "Gaussian Process",
+    "section": "",
+    "text": "Examples on classification research,change point test. Using non-parametric method first, then with bigger sample size to apply CLT.",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html#example-14.3",
+    "href": "GaussianProcess.html#example-14.3",
+    "title": "Gaussian Process",
+    "section": "Example 14.3",
+    "text": "Example 14.3\nlibrary(RNifti),library(fabisearch)",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html#multivariate-normal-distribution",
+    "href": "GaussianProcess.html#multivariate-normal-distribution",
+    "title": "Gaussian Process",
+    "section": "Multivariate Normal Distribution",
+    "text": "Multivariate Normal Distribution\n\\[\nX \\sim N(\\mu,\\sum)\n\\]\ninverse of covariance matrix is called precision matrix\n\nExample 15.1\nCompute the covariance matrix, given: vector \\(Z(X_1+X_2,X_3-X_2,X_2) ^T\\)\n\\[\nCov(Z) = \\begin{matrix}Cov(Z_1,Z_1)&Cov(Z_1,Z2) & Cov(Z_1,Z_3)\\\\Cov(Z_2,Z_1) & Cov(Z_2,Z_2) & Cov(Z_2,Z_3) \\\\ Cov(Z_3,Z_1) & Cov(Z_3,Z_2) & Cov(Z_3,Z_3)\\end{matrix}\n\\]\nNote: Taking the inverse of covariance matrix is the precision matrix and its non diagonal zero elements means there is no node between the two points, and its edges are (1,3),(2,3) if (1,2),(2,1) of the Q matrix are zero, denoted by\n\\[\nZ_1 \\perp Z_2 |Z_3\n\\]\n\n\nBackwards\nLet \\(Z_2,Y_1,Y_2 \\sim N(0,1)\\)\nThey have\n\\[\n\\begin{align*}\nZ_1 = aY_1+bZ_2 \\\\ Z_3 = cY_2+dZ_2\n\\end{align*}\n\\]\nUse the covariance matrix",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "L15.html",
+    "href": "L15.html",
+    "title": "Interference of Two Means",
+    "section": "",
+    "text": "Comparative Analysis\nTreatment Comparisons\nBefore and After Study",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "L15.html#introduction",
+    "href": "L15.html#introduction",
+    "title": "Interference of Two Means",
+    "section": "",
+    "text": "Comparative Analysis\nTreatment Comparisons\nBefore and After Study",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "L15.html#barx_1-barx_2-as-estimator",
+    "href": "L15.html#barx_1-barx_2-as-estimator",
+    "title": "Interference of Two Means",
+    "section": "\\(\\bar{X_1}-\\bar{X_2}\\) as Estimator",
+    "text": "\\(\\bar{X_1}-\\bar{X_2}\\) as Estimator",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "PoissonProcess.html",
+    "href": "PoissonProcess.html",
+    "title": "PoissonProcess",
+    "section": "",
+    "text": "\\[\nVar(X) =E[Var(X|Y)]+Var[E(X|Y)]\n\\]\nProof: The variance can be decomposed into expected values as follows: \\[\n\\operatorname{Var}(X)=\\mathrm{E}\\left(X^2\\right)-\\mathrm{E}(X)^2 .\n\\]\nThis can be rearranged into: \\[\n\\mathrm{E}\\left(Y^2\\right)=\\operatorname{Var}(Y)+\\mathrm{E}(Y)^2 .\n\\]\nApplying the law of total expectation, we have: \\[\n\\mathrm{E}\\left(Y^2\\right)=\\mathrm{E}\\left[\\operatorname{Var}(Y \\mid X)+\\mathrm{E}(Y \\mid X)^2\\right] .\n\\]\nNow subtract the second term from (2): \\[\n\\mathrm{E}\\left(X^2\\right)-\\mathrm{E}(X)^2=\\mathrm{E}\\left[\\operatorname{Var}(X \\mid Y)+\\mathrm{E}(X \\mid Y)^2\\right]-\\mathrm{E}(X)^2 .\n\\]\nAgain applying the law of total expectation, we have: \\[\n\\mathrm{E}\\left[\\operatorname{Var}(X \\mid Y)+\\mathrm{E}(X \\mid Y)^2\\right]-\\mathrm{E}[\\mathrm{E}(X \\mid Y)]^2 .\n\\]\nWith the linearity of the expected value, the terms can be regrouped to give: \\[\n\\mathrm{E}[\\operatorname{Var}(X \\mid Y)]+\\left(\\mathrm{E}\\left[\\mathrm{E}(X \\mid Y)^2\\right]-\\mathrm{E}[\\mathrm{E}(X \\mid Y)]^2\\right) .\n\\]\nUsing the decomposition of variance into expected values, we finally have: \\[\n\\operatorname{Var}(X)=\\mathrm{E}[\\operatorname{Var}(X \\mid Y)]+\\operatorname{Var}[\\mathrm{E}(X \\mid Y)]\n\\]",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "PoissonProcess"
+    ]
+  },
+  {
+    "objectID": "PoissonProcess.html#law-of-total-variance",
+    "href": "PoissonProcess.html#law-of-total-variance",
+    "title": "PoissonProcess",
+    "section": "",
+    "text": "\\[\nVar(X) =E[Var(X|Y)]+Var[E(X|Y)]\n\\]\nProof: The variance can be decomposed into expected values as follows: \\[\n\\operatorname{Var}(X)=\\mathrm{E}\\left(X^2\\right)-\\mathrm{E}(X)^2 .\n\\]\nThis can be rearranged into: \\[\n\\mathrm{E}\\left(Y^2\\right)=\\operatorname{Var}(Y)+\\mathrm{E}(Y)^2 .\n\\]\nApplying the law of total expectation, we have: \\[\n\\mathrm{E}\\left(Y^2\\right)=\\mathrm{E}\\left[\\operatorname{Var}(Y \\mid X)+\\mathrm{E}(Y \\mid X)^2\\right] .\n\\]\nNow subtract the second term from (2): \\[\n\\mathrm{E}\\left(X^2\\right)-\\mathrm{E}(X)^2=\\mathrm{E}\\left[\\operatorname{Var}(X \\mid Y)+\\mathrm{E}(X \\mid Y)^2\\right]-\\mathrm{E}(X)^2 .\n\\]\nAgain applying the law of total expectation, we have: \\[\n\\mathrm{E}\\left[\\operatorname{Var}(X \\mid Y)+\\mathrm{E}(X \\mid Y)^2\\right]-\\mathrm{E}[\\mathrm{E}(X \\mid Y)]^2 .\n\\]\nWith the linearity of the expected value, the terms can be regrouped to give: \\[\n\\mathrm{E}[\\operatorname{Var}(X \\mid Y)]+\\left(\\mathrm{E}\\left[\\mathrm{E}(X \\mid Y)^2\\right]-\\mathrm{E}[\\mathrm{E}(X \\mid Y)]^2\\right) .\n\\]\nUsing the decomposition of variance into expected values, we finally have: \\[\n\\operatorname{Var}(X)=\\mathrm{E}[\\operatorname{Var}(X \\mid Y)]+\\operatorname{Var}[\\mathrm{E}(X \\mid Y)]\n\\]",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "PoissonProcess"
+    ]
+  },
+  {
+    "objectID": "PoissonProcess.html#compound-poisson-process",
+    "href": "PoissonProcess.html#compound-poisson-process",
+    "title": "PoissonProcess",
+    "section": "Compound Poisson Process",
+    "text": "Compound Poisson Process\n\\[\nZ(t) = \\sum_{k=1}^{X(t)}Y_k\n\\]\nTake its exptcation:\n\\[\nE[Z(t)]= E[E[Z(t)|X(t)]]=E[\\mu X(t)]= \\mu\\lambda t\n\\]\nAnd its variance:\n\\[\nVar[Z(t)]=E[Var[Z(t)|X(t)]] + Var[E(Z(t)|X(t))]\n\\]\nUsed the Law of total Variance, and sub in previous result \\(E(Z(t)|X(t))=\\mu X(t)\\)\n\nhence the result goes to\n\\[\nE[\\sigma^2X(t)] + Var[\\mu X(t)]= \\sigma ^2 \\lambda + \\mu^2 \\sigma^2\n\\]\nNote: use MGF + Law of toal expectation can reach the same result but it’s easier beyond 3rd moment\n\nExample 13.1\nAftershocks constitute the greatest proportion of shocks in\nan earthquake catalog。\n\n\nSolution\n\\(Z(t)=\\sum_{k=1}^{X(t)} Y_k\\), for \\(t \\geq 0\\), where \\(X(t)\\) is a homogeneous Poisson process with \\(\\lambda=0.9\\) (year) and \\(Y\\) has a geometric distribution with parameter \\(p=0.2\\), mean \\(\\mu=1 / p\\), and variance \\(\\sigma^2=(1-p) / p^2\\). Note that \\(E[Z(t)]=\\mu \\lambda t\\) and \\(\\operatorname{Var}[Z(t)]=\\left(\\sigma^2+\\mu^2\\right) \\lambda t\\). Find the approximate probability that at least 100 aftershocks within the next 50 years.\n\nlambda=0.9;p=0.2;mu=1/p;sigma2=(1-p)/p^2\nm1=mu*lambda*50;m2=(sigma2+mu^2)*lambda*50\n1-pnorm(250,225,sqrt(m2))\n\n[1] 0.2892574\n\n\n\n\nEstimate \\(\\lambda\\)\nTaking mean on the shocks\n\n\nEstimate \\(p\\)\nMethod of moment",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "PoissonProcess"
+    ]
+  },
+  {
+    "objectID": "PoissonProcess.html#example-13.2",
+    "href": "PoissonProcess.html#example-13.2",
+    "title": "PoissonProcess",
+    "section": "Example 13.2",
+    "text": "Example 13.2\nSuppose that families migrate to an area at a Poisson rate \\(\\lambda=2\\) per week. Find the approximate probability that at least 240 people migrate to the area within the next 50 weeks.\n\\[\nE[X(50)]= \\lambda * 50 *E(Y_i) = 2*50 *5/2\n\\]",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "PoissonProcess"
+    ]
+  },
+  {
+    "objectID": "PoissonProcess.html#example-13.3",
+    "href": "PoissonProcess.html#example-13.3",
+    "title": "PoissonProcess",
+    "section": "Example 13.3",
+    "text": "Example 13.3\nThe number of hours between successive train arrivals (T ) at the station is uniformly distributed on (0, 1).Passengers arrived according to a Poisson process with rate 7 per hour. Suppose a train has just left the station. Let X denote the number of people who get on the next train. Find \\(E(X) ,Var(X)\\)",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "PoissonProcess"
+    ]
+  },
+  {
+    "objectID": "PoissonProcess.html#solution-1",
+    "href": "PoissonProcess.html#solution-1",
+    "title": "PoissonProcess",
+    "section": "Solution",
+    "text": "Solution\n\\[E(X) = E(E(X|T)) = E(7T(t)) = 0.5*7\\]\n\\[\nVar(X)= E(Var[X|T])+Var[E(X|T)]\n\\]\nSimplifies:\n\\[\nRHS= E(Var[X|T])+ 49Var[T] = 7*\\frac{1}{2}+ \\frac{49}{12}\n\\]",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "PoissonProcess"
+    ]
+  },
+  {
+    "objectID": "CramérRaoLowerBound.html",
+    "href": "CramérRaoLowerBound.html",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "",
+    "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB.",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Cramér–Rao Lower Bound"
+    ]
+  },
+  {
+    "objectID": "CramérRaoLowerBound.html#definition",
+    "href": "CramérRaoLowerBound.html#definition",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Definition",
+    "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\).",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Cramér–Rao Lower Bound"
+    ]
+  },
+  {
+    "objectID": "CramérRaoLowerBound.html#proof",
+    "href": "CramérRaoLowerBound.html#proof",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Proof",
+    "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired.",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Cramér–Rao Lower Bound"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jikai Fang",
+    "section": "",
+    "text": "Nice to meet you. fangjk@student.ubc.ca\n\n\n\nFeel Free to Click the image below to Comment↓\n\n\n\n\n\n\n\n\n  ...  \n        \n        Submit",
+    "crumbs": [
+      "Home",
+      "Jikai Fang"
+    ]
+  },
+  {
+    "objectID": "proofs.html",
+    "href": "proofs.html",
+    "title": "Proofs",
+    "section": "",
+    "text": "For study purposes only"
+  },
+  {
+    "objectID": "proofs.html#description",
+    "href": "proofs.html#description",
+    "title": "Proofs",
+    "section": "",
+    "text": "For study purposes only"
+  },
+  {
+    "objectID": "proofs.html#proofs-library",
+    "href": "proofs.html#proofs-library",
+    "title": "Proofs",
+    "section": "Proofs Library",
+    "text": "Proofs Library\n\n\n\nProofs with Coding\nProofs"
+  }
+]
