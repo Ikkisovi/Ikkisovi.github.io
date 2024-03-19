@@ -108,202 +108,74 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I love boobs.\nI bench 70KG + squat 110KG + dead lift 120KG = 300KG"
-  },
-  {
-    "objectID": "CourseMaterial.html",
-    "href": "CourseMaterial.html",
-    "title": "CourseMaterial-Stochastic-Process",
-    "section": "",
-    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "objectID": "Simulations.html#stationary-distribution",
+    "href": "Simulations.html#stationary-distribution",
+    "title": "CourseSimulatioinExamples",
+    "section": "Stationary Distribution",
+    "text": "Stationary Distribution",
     "crumbs": [
       "Home",
       "STAT403",
-      "CourseMaterial-Stochastic-Process"
+      "CourseSimulatioinExamples"
     ]
   },
   {
-    "objectID": "CourseMaterial.html#table-of-content",
-    "href": "CourseMaterial.html#table-of-content",
-    "title": "CourseMaterial-Stochastic-Process",
-    "section": "",
-    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "objectID": "Simulations.html#poisson-process",
+    "href": "Simulations.html#poisson-process",
+    "title": "CourseSimulatioinExamples",
+    "section": "Poisson Process",
+    "text": "Poisson Process",
     "crumbs": [
       "Home",
       "STAT403",
-      "CourseMaterial-Stochastic-Process"
+      "CourseSimulatioinExamples"
     ]
   },
   {
-    "objectID": "FinalProject.html",
-    "href": "FinalProject.html",
-    "title": "Final Project",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jikai Fang",
     "section": "",
-    "text": "Welcome, my final project is about applying DeGroot Learning model on banking dataset availiable in Kaggle, and then using simulations to count and occurence and calculate the transition probability, finally, calculate the stationary distribution on the markov chain object.",
+    "text": "Nice to meet you. fangjk@student.ubc.ca\n\n\n\nFeel Free to Click the image below to Comment↓\n\n\n\n\n\n\n\n\n  ...  \n        \n        Submit",
     "crumbs": [
       "Home",
-      "STAT403",
-      "Final Project"
+      "Jikai Fang"
     ]
   },
   {
-    "objectID": "Q1-2.html",
-    "href": "Q1-2.html",
-    "title": "Q1-2",
+    "objectID": "CramérRaoLowerBound.html",
+    "href": "CramérRaoLowerBound.html",
+    "title": "Cramér–Rao Lower Bound",
     "section": "",
-    "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
-    "crumbs": [
-      "Home",
-      "Interviews",
-      "Q1-2"
-    ]
-  },
-  {
-    "objectID": "Q1-2.html#quant-interview-questions",
-    "href": "Q1-2.html#quant-interview-questions",
-    "title": "Q1-2",
-    "section": "",
-    "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
-    "crumbs": [
-      "Home",
-      "Interviews",
-      "Q1-2"
-    ]
-  },
-  {
-    "objectID": "Q1-2.html#q1",
-    "href": "Q1-2.html#q1",
-    "title": "Q1-2",
-    "section": "Q1",
-    "text": "Q1\nPut options with strikes 30 and 20 on the same underlying asset and with the same maturity are trading for $6 and $4, respectively. Can you find an arbitrage?\nAnswer:- CFA I, key words:option, portfolio,strike",
-    "crumbs": [
-      "Home",
-      "Interviews",
-      "Q1-2"
-    ]
-  },
-  {
-    "objectID": "Q1-2.html#q2",
-    "href": "Q1-2.html#q2",
-    "title": "Q1-2",
-    "section": "Q2",
-    "text": "Q2\nThe number \\(2^{29}\\) has 9 digits, all different. Without computing \\(2^{29}\\), find the missing digit.\nAnswer:- Key words: Combinations theory, number theory, recall:\n\\[\n9 \\mid n- D(n)\n\\] which sum of all its digits is divisible by 9, thus we have:\n\\[\n9 \\mid 2^{29}- D(2^{29})\n\\]\n\\[\n9 \\mid \\sum_{j=0}^9 j -D(2^{29})\n\\]",
-    "crumbs": [
-      "Home",
-      "Interviews",
-      "Q1-2"
-    ]
-  },
-  {
-    "objectID": "Q1-2.html#q3-tower-rule",
-    "href": "Q1-2.html#q3-tower-rule",
-    "title": "Q1-2",
-    "section": "Q3 Tower Rule",
-    "text": "Q3 Tower Rule\nException of \\(\\Phi(X+a)\\), assume another \\(Y\\sim N(0,1)\\), such that \\(\\Phi(X+a)= P(Y&lt;X+a)\\) , take its expectation:\n\\[\nE_x(\\Phi(X+a)) = E_x(P(Y&lt;X+a)|x)\n\\]\nSince X,Y are independent, we can apply the tower rule:\n\\[\n\\begin{align}\n=P(Y&lt;X+a)=P(Y-X&lt;a)\\\\ =P(\\frac{Y-X}{\\sqrt 2} &lt; \\frac{a}{\\sqrt 2} ) \\\\\n= \\Phi(\\frac{a}{\\sqrt{2}})\n\\end{align}\n\\]",
-    "crumbs": [
-      "Home",
-      "Interviews",
-      "Q1-2"
-    ]
-  },
-  {
-    "objectID": "Q1-2.html#q4-throw-coins-dices",
-    "href": "Q1-2.html#q4-throw-coins-dices",
-    "title": "Q1-2",
-    "section": "Q4 Throw Coins, dices",
-    "text": "Q4 Throw Coins, dices\nThrow coins can be converted to a markov chain question, Expected step to recurrent states\ndraw a graph solving this: Expected number of throwing HHH sequence:\n\\[\n\\begin{align}\nu_0=0.5(1+u_0)+0.5(1+u_1)=1+0.5u_0+0.5u_1 \\\\\nu_1 =0.5(1+u_0)+0.5(1+u_2)\\\\\nu_2 = 0.5(1+u_0+0.5)\n\\end{align}\n\\]\nNote, u_0 are steps from that state to the recurrent state.\nTo understand this, think about u_0 first, 0.5(1+u_0) means, there’s 0.5 chance the first throw is not H, hence waste this step, and plus itself step u_0, and 0.5(1+u_1) is assuming the first toss is H already, we are remaining u_1 step, due to 0.5+0.5 =1 has to be, there’s no terms for u_2.\n\nDices\nExpected sum for throwing 6 side dices, until the first 1 is appear.\nthoughts: Dice is a discrete uniform distribution. Using Law of total expectation could find the expected tosses of getting a 1:\n\\[\nE = \\frac{1}{6}*0+ \\frac{5}{6}(1+E)\n\\]",
-    "crumbs": [
-      "Home",
-      "Interviews",
-      "Q1-2"
-    ]
-  },
-  {
-    "objectID": "GaussianProcess.html",
-    "href": "GaussianProcess.html",
-    "title": "Gaussian Process",
-    "section": "",
-    "text": "Examples on classification research,change point test. Using non-parametric method first, then with bigger sample size to apply CLT.",
-    "crumbs": [
-      "Home",
-      "STAT403",
-      "Gaussian Process"
-    ]
-  },
-  {
-    "objectID": "GaussianProcess.html#normal-distribution",
-    "href": "GaussianProcess.html#normal-distribution",
-    "title": "Gaussian Process",
-    "section": "",
-    "text": "Examples on classification research,change point test. Using non-parametric method first, then with bigger sample size to apply CLT.",
-    "crumbs": [
-      "Home",
-      "STAT403",
-      "Gaussian Process"
-    ]
-  },
-  {
-    "objectID": "GaussianProcess.html#example-14.3",
-    "href": "GaussianProcess.html#example-14.3",
-    "title": "Gaussian Process",
-    "section": "Example 14.3",
-    "text": "Example 14.3\nlibrary(RNifti),library(fabisearch)",
-    "crumbs": [
-      "Home",
-      "STAT403",
-      "Gaussian Process"
-    ]
-  },
-  {
-    "objectID": "GaussianProcess.html#multivariate-normal-distribution",
-    "href": "GaussianProcess.html#multivariate-normal-distribution",
-    "title": "Gaussian Process",
-    "section": "Multivariate Normal Distribution",
-    "text": "Multivariate Normal Distribution\n\\[\nX \\sim N(\\mu,\\sum)\n\\]\ninverse of covariance matrix is called precision matrix\n\nExample 15.1\nCompute the covariance matrix, given: vector \\(Z(X_1+X_2,X_3-X_2,X_2) ^T\\)\n\\[\nCov(Z) = \\begin{matrix}Cov(Z_1,Z_1)&Cov(Z_1,Z2) & Cov(Z_1,Z_3)\\\\Cov(Z_2,Z_1) & Cov(Z_2,Z_2) & Cov(Z_2,Z_3) \\\\ Cov(Z_3,Z_1) & Cov(Z_3,Z_2) & Cov(Z_3,Z_3)\\end{matrix}\n\\]\nNote: Taking the inverse of covariance matrix is the precision matrix and its non diagonal zero elements means there is no node between the two points, and its edges are (1,3),(2,3) if (1,2),(2,1) of the Q matrix are zero, denoted by\n\\[\nZ_1 \\perp Z_2 |Z_3\n\\]\n\n\nBackwards\nLet \\(Z_2,Y_1,Y_2 \\sim N(0,1)\\)\nThey have\n\\[\n\\begin{align*}\nZ_1 = aY_1+bZ_2 \\\\ Z_3 = cY_2+dZ_2\n\\end{align*}\n\\]\nUse the covariance matrix",
-    "crumbs": [
-      "Home",
-      "STAT403",
-      "Gaussian Process"
-    ]
-  },
-  {
-    "objectID": "L15.html",
-    "href": "L15.html",
-    "title": "Interference of Two Means",
-    "section": "",
-    "text": "Comparative Analysis\nTreatment Comparisons\nBefore and After Study",
+    "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB.",
     "crumbs": [
       "Home",
       "STAT205",
-      "Interference of Two Means"
+      "Cramér–Rao Lower Bound"
     ]
   },
   {
-    "objectID": "L15.html#introduction",
-    "href": "L15.html#introduction",
-    "title": "Interference of Two Means",
-    "section": "",
-    "text": "Comparative Analysis\nTreatment Comparisons\nBefore and After Study",
+    "objectID": "CramérRaoLowerBound.html#definition",
+    "href": "CramérRaoLowerBound.html#definition",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Definition",
+    "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\).",
     "crumbs": [
       "Home",
       "STAT205",
-      "Interference of Two Means"
+      "Cramér–Rao Lower Bound"
     ]
   },
   {
-    "objectID": "L15.html#barx_1-barx_2-as-estimator",
-    "href": "L15.html#barx_1-barx_2-as-estimator",
-    "title": "Interference of Two Means",
-    "section": "\\(\\bar{X_1}-\\bar{X_2}\\) as Estimator",
-    "text": "\\(\\bar{X_1}-\\bar{X_2}\\) as Estimator",
+    "objectID": "CramérRaoLowerBound.html#proof",
+    "href": "CramérRaoLowerBound.html#proof",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Proof",
+    "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired.",
     "crumbs": [
       "Home",
       "STAT205",
-      "Interference of Two Means"
+      "Cramér–Rao Lower Bound"
     ]
   },
   {
@@ -379,51 +251,215 @@
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html",
-    "href": "CramérRaoLowerBound.html",
-    "title": "Cramér–Rao Lower Bound",
+    "objectID": "L15.html",
+    "href": "L15.html",
+    "title": "Interference of Two Means",
     "section": "",
-    "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB.",
+    "text": "Comparative Analysis\nTreatment Comparisons\nBefore and After Study",
     "crumbs": [
       "Home",
       "STAT205",
-      "Cramér–Rao Lower Bound"
+      "Interference of Two Means"
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html#definition",
-    "href": "CramérRaoLowerBound.html#definition",
-    "title": "Cramér–Rao Lower Bound",
-    "section": "Definition",
-    "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\).",
-    "crumbs": [
-      "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
-    ]
-  },
-  {
-    "objectID": "CramérRaoLowerBound.html#proof",
-    "href": "CramérRaoLowerBound.html#proof",
-    "title": "Cramér–Rao Lower Bound",
-    "section": "Proof",
-    "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired.",
-    "crumbs": [
-      "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jikai Fang",
+    "objectID": "L15.html#introduction",
+    "href": "L15.html#introduction",
+    "title": "Interference of Two Means",
     "section": "",
-    "text": "Nice to meet you. fangjk@student.ubc.ca\n\n\n\nFeel Free to Click the image below to Comment↓\n\n\n\n\n\n\n\n\n  ...  \n        \n        Submit",
+    "text": "Comparative Analysis\nTreatment Comparisons\nBefore and After Study",
     "crumbs": [
       "Home",
-      "Jikai Fang"
+      "STAT205",
+      "Interference of Two Means"
     ]
+  },
+  {
+    "objectID": "L15.html#barx_1-barx_2-as-estimator",
+    "href": "L15.html#barx_1-barx_2-as-estimator",
+    "title": "Interference of Two Means",
+    "section": "\\(\\bar{X_1}-\\bar{X_2}\\) as Estimator",
+    "text": "\\(\\bar{X_1}-\\bar{X_2}\\) as Estimator",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "L15.html#sampling-distribution-of-the-difference-in-sample-means",
+    "href": "L15.html#sampling-distribution-of-the-difference-in-sample-means",
+    "title": "Interference of Two Means",
+    "section": "Sampling Distribution of the Difference in Sample Means",
+    "text": "Sampling Distribution of the Difference in Sample Means\nIf we are sampling from independent populations, then \\[\nX_1-X_2 \\sim \\text { Normal }\\left(\\mu_1-\\mu_2, S E=\\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\\right)\n\\]\nThis will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( \\(n \\geq 30\\) ) samples from non-normal populations thanks to CLT.\n\nTwo-sample Z statistic\nIf we are sampling from independent populations, and doing inference on \\(\\mu_1-\\mu_2=\\delta\\) then the two sample \\(Z\\)-statistic is given by: \\[\nZ=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{\\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}}\n\\] follows a standard normal distribution. This will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( \\(n\\) \\(\\geq 30)\\) samples from non-normal populations thanks to CLT.\n\n\nUnknown Variance\nFollows a t distribution of course, this is for assuming equal variance and t \\(\\sim n_1+n_2-2\\)in addition if unknown if equal variance:\n\nWelch Procedure\nWelch Procedure for the Difference of means for Independent Groups \\(\\left(\\sigma_1^2 \\neq \\sigma_2^2\\right)\\) 1. \\(H_0: \\mu_1-\\mu_2=\\delta_0 \\quad H_A: \\begin{cases}\\mu_1-\\mu_2 \\neq \\delta_0 & \\text { two-sided test } \\\\ \\mu_1-\\mu_2&lt;\\delta_0 & \\text { one-sided (lower-tail) test } \\\\ \\mu_1-\\mu_2&gt;\\delta_0 & \\text { one-sided (upper-tail) test }\\end{cases}\\)\n2. Test Statistic: \\(\\quad T=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{\\sqrt{\\frac{S_1^2}{n_1}+\\frac{S_2^2}{n_2}}} \\sim t_\\nu\\) where \\(\\nu=\\frac{\\left(\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}\\right)^2}{\\frac{1}{n_1-1}\\left(\\frac{s_1^2}{n_1}\\right)^2+\\frac{1}{n_2-1}\\left(\\frac{s_2^2}{n_2}\\right)^2}\\) and \\(s_1^2\\) and \\(s_2^2\\) are the sample variances calculated using: \\[\ns_1^2=\\frac{\\sum_{i=1}^{n_1}\\left(x_{1 i}-\\bar{x}_1\\right)^2}{n_1-1} \\quad s_2^2=\\frac{\\sum_{i=1}^{n_2}\\left(x_{2 i}-\\bar{x}_2\\right)^2}{n_2-1}\n\\]\n\n\n\nPooled t-test for the Difference of means for Independent Groups \\(\\left(\\sigma_1^2=\\sigma_2^2\\right)\\)\n\\(H_0: \\mu_1-\\mu_2=\\delta_0 \\quad H_A: \\begin{cases}\\mu_1-\\mu_2 \\neq \\delta_0 & \\text { two-sided test } \\\\ \\mu_1-\\mu_2&lt;\\delta_0 & \\text { one-sided (lower-tail) test } \\\\ \\mu_1-\\mu_2&gt;\\delta_0 & \\text { one-sided (upper-tail) test }\\end{cases}\\) 2. Test Statistic: \\(\\quad T=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{s_p \\sqrt{\\frac{1}{n_1}+\\frac{1}{n_2}}} \\sim t_\\nu\\) where \\(\\nu=n_1+n_2-2\\) where \\(s_p\\) is the square-root of the pooled variance: \\[\ns_p^2=\\frac{\\left(n_1-1\\right) s_1^2+\\left(n_2-1\\right) s_2^2}{n_1+n_2-2}\n\\]",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html",
+    "href": "GaussianProcess.html",
+    "title": "Gaussian Process",
+    "section": "",
+    "text": "Examples on classification research,change point test. Using non-parametric method first, then with bigger sample size to apply CLT.",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html#normal-distribution",
+    "href": "GaussianProcess.html#normal-distribution",
+    "title": "Gaussian Process",
+    "section": "",
+    "text": "Examples on classification research,change point test. Using non-parametric method first, then with bigger sample size to apply CLT.",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html#example-14.3",
+    "href": "GaussianProcess.html#example-14.3",
+    "title": "Gaussian Process",
+    "section": "Example 14.3",
+    "text": "Example 14.3\nlibrary(RNifti),library(fabisearch)",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "GaussianProcess.html#multivariate-normal-distribution",
+    "href": "GaussianProcess.html#multivariate-normal-distribution",
+    "title": "Gaussian Process",
+    "section": "Multivariate Normal Distribution",
+    "text": "Multivariate Normal Distribution\n\\[\nX \\sim N(\\mu,\\sum)\n\\]\ninverse of covariance matrix is called precision matrix\n\nExample 15.1\nCompute the covariance matrix, given: vector \\(Z(X_1+X_2,X_3-X_2,X_2) ^T\\)\n\\[\nCov(Z) = \\begin{matrix}Cov(Z_1,Z_1)&Cov(Z_1,Z2) & Cov(Z_1,Z_3)\\\\Cov(Z_2,Z_1) & Cov(Z_2,Z_2) & Cov(Z_2,Z_3) \\\\ Cov(Z_3,Z_1) & Cov(Z_3,Z_2) & Cov(Z_3,Z_3)\\end{matrix}\n\\]\nNote: Taking the inverse of covariance matrix is the precision matrix and its non diagonal zero elements means there is no node between the two points, and its edges are (1,3),(2,3) if (1,2),(2,1) of the Q matrix are zero, denoted by\n\\[\nZ_1 \\perp Z_2 |Z_3\n\\]\n\n\nBackwards\nLet \\(Z_2,Y_1,Y_2 \\sim N(0,1)\\)\nThey have\n\\[\n\\begin{align*}\nZ_1 = aY_1+bZ_2 \\\\ Z_3 = cY_2+dZ_2\n\\end{align*}\n\\]\nUse the covariance matrix",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Gaussian Process"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html",
+    "href": "Q1-2.html",
+    "title": "Q1-2",
+    "section": "",
+    "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#quant-interview-questions",
+    "href": "Q1-2.html#quant-interview-questions",
+    "title": "Q1-2",
+    "section": "",
+    "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q1",
+    "href": "Q1-2.html#q1",
+    "title": "Q1-2",
+    "section": "Q1",
+    "text": "Q1\nPut options with strikes 30 and 20 on the same underlying asset and with the same maturity are trading for $6 and $4, respectively. Can you find an arbitrage?\nAnswer:- CFA I, key words:option, portfolio,strike",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q2",
+    "href": "Q1-2.html#q2",
+    "title": "Q1-2",
+    "section": "Q2",
+    "text": "Q2\nThe number \\(2^{29}\\) has 9 digits, all different. Without computing \\(2^{29}\\), find the missing digit.\nAnswer:- Key words: Combinations theory, number theory, recall:\n\\[\n9 \\mid n- D(n)\n\\] which sum of all its digits is divisible by 9, thus we have:\n\\[\n9 \\mid 2^{29}- D(2^{29})\n\\]\n\\[\n9 \\mid \\sum_{j=0}^9 j -D(2^{29})\n\\]",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q3-tower-rule",
+    "href": "Q1-2.html#q3-tower-rule",
+    "title": "Q1-2",
+    "section": "Q3 Tower Rule",
+    "text": "Q3 Tower Rule\nException of \\(\\Phi(X+a)\\), assume another \\(Y\\sim N(0,1)\\), such that \\(\\Phi(X+a)= P(Y&lt;X+a)\\) , take its expectation:\n\\[\nE_x(\\Phi(X+a)) = E_x(P(Y&lt;X+a)|x)\n\\]\nSince X,Y are independent, we can apply the tower rule:\n\\[\n\\begin{align}\n=P(Y&lt;X+a)=P(Y-X&lt;a)\\\\ =P(\\frac{Y-X}{\\sqrt 2} &lt; \\frac{a}{\\sqrt 2} ) \\\\\n= \\Phi(\\frac{a}{\\sqrt{2}})\n\\end{align}\n\\]",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "Q1-2.html#q4-throw-coins-dices",
+    "href": "Q1-2.html#q4-throw-coins-dices",
+    "title": "Q1-2",
+    "section": "Q4 Throw Coins, dices",
+    "text": "Q4 Throw Coins, dices\nThrow coins can be converted to a markov chain question, Expected step to recurrent states\ndraw a graph solving this: Expected number of throwing HHH sequence:\n\\[\n\\begin{align}\nu_0=0.5(1+u_0)+0.5(1+u_1)=1+0.5u_0+0.5u_1 \\\\\nu_1 =0.5(1+u_0)+0.5(1+u_2)\\\\\nu_2 = 0.5(1+u_0+0.5)\n\\end{align}\n\\]\nNote, u_0 are steps from that state to the recurrent state.\nTo understand this, think about u_0 first, 0.5(1+u_0) means, there’s 0.5 chance the first throw is not H, hence waste this step, and plus itself step u_0, and 0.5(1+u_1) is assuming the first toss is H already, we are remaining u_1 step, due to 0.5+0.5 =1 has to be, there’s no terms for u_2.\n\nDices\nExpected sum for throwing 6 side dices, until the first 1 is appear.\nthoughts: Dice is a discrete uniform distribution. Using Law of total expectation could find the expected tosses of getting a 1:\n\\[\nE = \\frac{1}{6}*0+ \\frac{5}{6}(1+E)\n\\]",
+    "crumbs": [
+      "Home",
+      "Interviews",
+      "Q1-2"
+    ]
+  },
+  {
+    "objectID": "FinalProject.html",
+    "href": "FinalProject.html",
+    "title": "Final Project",
+    "section": "",
+    "text": "Welcome, my final project is about applying DeGroot Learning model on banking dataset availiable in Kaggle, and then using simulations to count and occurence and calculate the transition probability, finally, calculate the stationary distribution on the markov chain object.",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Final Project"
+    ]
+  },
+  {
+    "objectID": "CourseMaterial.html",
+    "href": "CourseMaterial.html",
+    "title": "CourseMaterial-Stochastic-Process",
+    "section": "",
+    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseMaterial-Stochastic-Process"
+    ]
+  },
+  {
+    "objectID": "CourseMaterial.html#table-of-content",
+    "href": "CourseMaterial.html#table-of-content",
+    "title": "CourseMaterial-Stochastic-Process",
+    "section": "",
+    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseMaterial-Stochastic-Process"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I love boobs.\nI bench 70KG + squat 110KG + dead lift 120KG = 300KG"
   },
   {
     "objectID": "proofs.html",

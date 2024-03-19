@@ -203,6 +203,12 @@ window.Quarto = {
  <span class="menu-text">Gaussian Process</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Simulations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CourseSimulatioinExamples</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -275,6 +281,12 @@ window.Quarto = {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#barx_1-barx_2-as-estimator" id="toc-barx_1-barx_2-as-estimator" class="nav-link" data-scroll-target="#barx_1-barx_2-as-estimator"><span class="math inline">\(\bar{X_1}-\bar{X_2}\)</span> as Estimator</a></li>
+  <li><a href="#sampling-distribution-of-the-difference-in-sample-means" id="toc-sampling-distribution-of-the-difference-in-sample-means" class="nav-link" data-scroll-target="#sampling-distribution-of-the-difference-in-sample-means">Sampling Distribution of the Difference in Sample Means</a>
+  <ul class="collapse">
+  <li><a href="#two-sample-z-statistic" id="toc-two-sample-z-statistic" class="nav-link" data-scroll-target="#two-sample-z-statistic">Two-sample Z statistic</a></li>
+  <li><a href="#unknown-variance" id="toc-unknown-variance" class="nav-link" data-scroll-target="#unknown-variance">Unknown Variance</a></li>
+  <li><a href="#pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right" id="toc-pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right" class="nav-link" data-scroll-target="#pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right">Pooled t-test for the Difference of means for Independent Groups <span class="math inline">\(\left(\sigma_1^2=\sigma_2^2\right)\)</span></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -311,8 +323,38 @@ window.Quarto = {
 <section id="barx_1-barx_2-as-estimator" class="level2">
 <h2 class="anchored" data-anchor-id="barx_1-barx_2-as-estimator"><span class="math inline">\(\bar{X_1}-\bar{X_2}\)</span> as Estimator</h2>
 <p><img src="images/截屏2024-03-13 下午1.49.51.png" class="img-fluid" width="516"></p>
+</section>
+<section id="sampling-distribution-of-the-difference-in-sample-means" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-distribution-of-the-difference-in-sample-means">Sampling Distribution of the Difference in Sample Means</h2>
+<p>If we are sampling from independent populations, then <span class="math display">\[
+X_1-X_2 \sim \text { Normal }\left(\mu_1-\mu_2, S E=\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}\right)
+\]</span></p>
+<p>This will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( <span class="math inline">\(n \geq 30\)</span> ) samples from non-normal populations thanks to CLT.</p>
+<section id="two-sample-z-statistic" class="level3">
+<h3 class="anchored" data-anchor-id="two-sample-z-statistic">Two-sample Z statistic</h3>
+<p>If we are sampling from independent populations, and doing inference on <span class="math inline">\(\mu_1-\mu_2=\delta\)</span> then the two sample <span class="math inline">\(Z\)</span>-statistic is given by: <span class="math display">\[
+Z=\frac{\bar{X}_1-\bar{X}_2-\delta}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
+\]</span> follows a standard normal distribution. This will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( <span class="math inline">\(n\)</span> <span class="math inline">\(\geq 30)\)</span> samples from non-normal populations thanks to CLT.</p>
+</section>
+<section id="unknown-variance" class="level3">
+<h3 class="anchored" data-anchor-id="unknown-variance">Unknown Variance</h3>
+<p>Follows a t distribution of course, this is for assuming equal variance and t <span class="math inline">\(\sim n_1+n_2-2\)</span>in addition if unknown if equal variance:</p>
+<section id="welch-procedure" class="level4">
+<h4 class="anchored" data-anchor-id="welch-procedure">Welch Procedure</h4>
+<p>Welch Procedure for the Difference of means for Independent Groups <span class="math inline">\(\left(\sigma_1^2 \neq \sigma_2^2\right)\)</span> 1. <span class="math inline">\(H_0: \mu_1-\mu_2=\delta_0 \quad H_A: \begin{cases}\mu_1-\mu_2 \neq \delta_0 &amp; \text { two-sided test } \\ \mu_1-\mu_2&lt;\delta_0 &amp; \text { one-sided (lower-tail) test } \\ \mu_1-\mu_2&gt;\delta_0 &amp; \text { one-sided (upper-tail) test }\end{cases}\)</span></p>
+<p>2. Test Statistic: <span class="math inline">\(\quad T=\frac{\bar{X}_1-\bar{X}_2-\delta}{\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}}} \sim t_\nu\)</span> where <span class="math inline">\(\nu=\frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2}{\frac{1}{n_1-1}\left(\frac{s_1^2}{n_1}\right)^2+\frac{1}{n_2-1}\left(\frac{s_2^2}{n_2}\right)^2}\)</span> and <span class="math inline">\(s_1^2\)</span> and <span class="math inline">\(s_2^2\)</span> are the sample variances calculated using: <span class="math display">\[
+s_1^2=\frac{\sum_{i=1}^{n_1}\left(x_{1 i}-\bar{x}_1\right)^2}{n_1-1} \quad s_2^2=\frac{\sum_{i=1}^{n_2}\left(x_{2 i}-\bar{x}_2\right)^2}{n_2-1}
+\]</span></p>
+</section>
+</section>
+<section id="pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right" class="level3">
+<h3 class="anchored" data-anchor-id="pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right">Pooled t-test for the Difference of means for Independent Groups <span class="math inline">\(\left(\sigma_1^2=\sigma_2^2\right)\)</span></h3>
+<p><span class="math inline">\(H_0: \mu_1-\mu_2=\delta_0 \quad H_A: \begin{cases}\mu_1-\mu_2 \neq \delta_0 &amp; \text { two-sided test } \\ \mu_1-\mu_2&lt;\delta_0 &amp; \text { one-sided (lower-tail) test } \\ \mu_1-\mu_2&gt;\delta_0 &amp; \text { one-sided (upper-tail) test }\end{cases}\)</span> 2. Test Statistic: <span class="math inline">\(\quad T=\frac{\bar{X}_1-\bar{X}_2-\delta}{s_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t_\nu\)</span> where <span class="math inline">\(\nu=n_1+n_2-2\)</span> where <span class="math inline">\(s_p\)</span> is the square-root of the pooled variance: <span class="math display">\[
+s_p^2=\frac{\left(n_1-1\right) s_1^2+\left(n_2-1\right) s_2^2}{n_1+n_2-2}
+\]</span></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
