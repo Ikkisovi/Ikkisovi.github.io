@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Jikai Fang - Confidence Interval</title>
+<title>Jikai Fang - Theorem Weak Law of Large Numbers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -174,7 +140,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./STAT205.html">STAT205</a></li><li class="breadcrumb-item"><a href="./L11-13.html">Confidence Interval</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wlln.html">Proofs</a></li><li class="breadcrumb-item"><a href="./wlln.html">Theorem Weak Law of Large Numbers</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -211,7 +177,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wlln.html" class="sidebar-item-text sidebar-link">
+  <a href="./wlln.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Theorem Weak Law of Large Numbers</span></a>
   </div>
 </li>
@@ -281,7 +247,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./L11-13.html" class="sidebar-item-text sidebar-link active">
+  <a href="./L11-13.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence Interval</span></a>
   </div>
 </li>
@@ -331,30 +297,14 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#rejection-region" id="toc-rejection-region" class="nav-link active" data-scroll-target="#rejection-region">Rejection Region</a></li>
-  <li><a href="#p-value-approach" id="toc-p-value-approach" class="nav-link" data-scroll-target="#p-value-approach">P-Value Approach</a></li>
-  <li><a href="#t-test" id="toc-t-test" class="nav-link" data-scroll-target="#t-test">T Test</a></li>
-  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a>
-  <ul class="collapse">
-  <li><a href="#for-population-mean" id="toc-for-population-mean" class="nav-link" data-scroll-target="#for-population-mean">For Population Mean</a></li>
-  <li><a href="#for-proportions" id="toc-for-proportions" class="nav-link" data-scroll-target="#for-proportions">For Proportions</a></li>
-  </ul></li>
-  <li><a href="#critical-value-approach" id="toc-critical-value-approach" class="nav-link" data-scroll-target="#critical-value-approach">Critical Value Approach</a></li>
-  <li><a href="#p-value-approach-1" id="toc-p-value-approach-1" class="nav-link" data-scroll-target="#p-value-approach-1">P-Value Approach</a></li>
-  <li><a href="#chi-square" id="toc-chi-square" class="nav-link" data-scroll-target="#chi-square">Chi Square</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./STAT205.html">STAT205</a></li><li class="breadcrumb-item"><a href="./L11-13.html">Confidence Interval</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wlln.html">Proofs</a></li><li class="breadcrumb-item"><a href="./wlln.html">Theorem Weak Law of Large Numbers</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Confidence Interval</h1>
+<h1 class="title">Theorem Weak Law of Large Numbers</h1>
 </div>
 
 
@@ -371,74 +321,26 @@ window.Quarto = {
 </header>
 
 
-<p>assume <span class="math inline">\(\mu_\bar{X}=\mu_0\)</span>, with sample size n&gt;=30, we are expected to conduct z test.</p>
-<section id="rejection-region" class="level2">
-<h2 class="anchored" data-anchor-id="rejection-region">Rejection Region</h2>
-<ul>
-<li><span class="math inline">\(P((-z_{crit}&lt;Z&lt;z_{crit})) = 1 -a\)</span></li>
-</ul>
-</section>
-<section id="p-value-approach" class="level2">
-<h2 class="anchored" data-anchor-id="p-value-approach">P-Value Approach</h2>
-<ul>
-<li>If <span class="math inline">\(p-value &lt; a\)</span>, we reject <span class="math inline">\(H_0\)</span></li>
-</ul>
-</section>
-<section id="t-test" class="level2">
-<h2 class="anchored" data-anchor-id="t-test">T Test</h2>
-<ul>
-<li><p>T test has fatter tails</p></li>
-<li><p>t_n-1</p></li>
-</ul>
-</section>
-<section id="assumptions" class="level2">
-<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
-<section id="for-population-mean" class="level3">
-<h3 class="anchored" data-anchor-id="for-population-mean">For Population Mean</h3>
-<ul>
-<li><p>Normality, if sample size not &gt;30</p></li>
-<li><p>qqnorm in R checks normality if knows raw data. If no, checks outliers and if everything within 2.5 SD of the mean</p></li>
-<li><p>Independence of observations</p></li>
-</ul>
-</section>
-<section id="for-proportions" class="level3">
-<h3 class="anchored" data-anchor-id="for-proportions">For Proportions</h3>
-<ul>
-<li><p>Simple random sample, independence</p></li>
-<li><p><span class="math inline">\(np&gt;=10\)</span>, and <span class="math inline">\(n(1-p)&gt;=10\)</span></p></li>
-</ul>
-</section>
-</section>
-<section id="critical-value-approach" class="level2">
-<h2 class="anchored" data-anchor-id="critical-value-approach">Critical Value Approach</h2>
-<p>Reject when obs. test stat falls in Rejection Region &gt;(1-a), lower.tail=FALSE</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.025</span>,<span class="at">df=</span><span class="dv">99</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="do">##True critical value, if founded t testistic &gt; this, reject the null hypothesis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.984217</code></pre>
-</div>
-</div>
-</section>
-<section id="p-value-approach-1" class="level2">
-<h2 class="anchored" data-anchor-id="p-value-approach-1">P-Value Approach</h2>
-<ul>
-<li><p>Reject if p-value &lt; a</p></li>
-<li><p>It is one tail</p></li>
-<li><p>For example, assuming T test stat = 6.33, <span class="math inline">\(t_{19,0.005}=2.712\)</span>, p value &lt; 0.005, and of course reject null hypothesis</p></li>
-</ul>
-</section>
-<section id="chi-square" class="level2">
-<h2 class="anchored" data-anchor-id="chi-square">Chi Square</h2>
-<ul>
-<li><p><span class="math display">\[
-\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}
-\]</span>only if random samples from normal populations, and sigma square is known</p></li>
-<li><p><span class="math inline">\(\frac{a}{2}\)</span> on both tails if two tails hypothesis, <span class="math inline">\(a\)</span> and <span class="math inline">\(1-a\)</span> p value on right or left tail</p></li>
-<li><p>2*pchisq(X^2_obs,df=n-1,LT=F), pchisq(X^2_obs,df=n-1,LT=F),pchisq(X^2_obs,df=n-1,LT= T)</p></li>
-</ul>
+<p>Weak Law of Large Numbers Let <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> be a random sample from a population that has finite mean <span class="math inline">\(\mu\)</span> and finite variance <span class="math inline">\(\sigma^2\)</span>. Then, the sequence of sample means <span class="math inline">\(\bar{X}_n=\sum_{i=1}^n \frac{X_i}{n}\)</span> converges in probability to the population mean <span class="math inline">\(\mu\)</span>.</p>
+<p><em>Proof:</em></p>
+<p>The idea is to apply Chebyshev’s Inequality to <span class="math inline">\(\bar{X}_n\)</span>. In order to do this, we need to determine <span class="math inline">\(E\left(\bar{X}_n\right)\)</span> and <span class="math inline">\(V\left(\bar{X}_n\right)\)</span>. Note that since <span class="math inline">\(X_1, \ldots, X_n\)</span> is a random sample from a population with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>, it follows that, <span class="math display">\[
+E\left(X_i\right)=\mu, \quad V\left(X_i\right)=\sigma^2 \quad \text { for all } i=1,2, \ldots, n
+\]</span></p>
+<p>We can now calculate the mean and variance if <span class="math inline">\(\bar{X}_n\)</span>. First, we have that <span class="math display">\[
+E\left[\bar{X}_n\right]=E\left(\sum_{i=1}^n \frac{X_i}{n}\right)=\frac{1}{n} \sum_{i=1}^n E\left(X_i\right)=\frac{n \mu}{n}=\mu
+\]</span></p>
+<p>and, since the <span class="math inline">\(X_i\)</span> ’s are independent, we have <span class="math display">\[
+V\left(\bar{X}_n\right)=V\left(\sum_{i=1}^n \frac{X_i}{n}\right)=\frac{1}{n^2} \sum_{i=1}^n V\left(X_i\right)=\frac{n \sigma^2}{n^2}=\frac{\sigma^2}{n} .
+\]</span></p>
+<p>We can now apply Chebyshev’s Inequality. Fix <span class="math inline">\(\varepsilon&gt;0\)</span> and set <span class="math inline">\(k=\frac{\sqrt{n} \varepsilon}{\sigma}\)</span>. Then, Chebyshev’s Inequality applied to <span class="math inline">\(\bar{X}_n\)</span> implies that, <span class="math display">\[
+P\left(\left|\bar{X}_n-\mu\right|&lt;\frac{\sqrt{n} \varepsilon}{\sigma} \cdot \frac{\sigma}{\sqrt{n}}\right) \geq 1-\frac{1}{(\sqrt{n} \varepsilon / \sigma)^2} \Longrightarrow P\left(\left|\bar{X}_n-\mu\right|&lt;\varepsilon\right) \geq 1-\frac{\sigma}{n \varepsilon^2} \text { for all } n \geq 1
+\]</span></p>
+<p>Since this holds for all <span class="math inline">\(n \geq 1\)</span>, we are permitted to let <span class="math inline">\(n \rightarrow \infty\)</span>. This yields, <span class="math display">\[
+\lim _{n \rightarrow \infty} P\left(\left|\bar{X}_n-\mu\right|&lt;\varepsilon\right) \geq 1 \Longrightarrow \lim _{n \rightarrow \infty} P\left(\left|\bar{X}_n-\mu\right|&lt;\varepsilon\right)=1
+\]</span></p>
+<p>Since <span class="math inline">\(\varepsilon&gt;0\)</span> was fixed arbitrarily, this shows <span class="math inline">\(\bar{X}_n \xrightarrow{p} \mu\)</span>.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

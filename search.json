@@ -108,40 +108,32 @@
     ]
   },
   {
-    "objectID": "Simulations.html#stationary-distribution",
-    "href": "Simulations.html#stationary-distribution",
-    "title": "CourseSimulatioinExamples",
-    "section": "Stationary Distribution",
-    "text": "Stationary Distribution",
-    "crumbs": [
-      "Home",
-      "STAT403",
-      "CourseSimulatioinExamples"
-    ]
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I love boobs.\nI bench 70KG + squat 110KG + dead lift 120KG = 300KG"
   },
   {
-    "objectID": "Simulations.html#poisson-process",
-    "href": "Simulations.html#poisson-process",
-    "title": "CourseSimulatioinExamples",
-    "section": "Poisson Process",
-    "text": "Poisson Process",
-    "crumbs": [
-      "Home",
-      "STAT403",
-      "CourseSimulatioinExamples"
-    ]
+    "objectID": "CramerRaoLowerBound.html",
+    "href": "CramerRaoLowerBound.html",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "",
+    "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB."
   },
   {
-    "objectID": "Simulations.html#brownian-motion",
-    "href": "Simulations.html#brownian-motion",
-    "title": "CourseSimulatioinExamples",
-    "section": "Brownian Motion",
-    "text": "Brownian Motion",
-    "crumbs": [
-      "Home",
-      "STAT403",
-      "CourseSimulatioinExamples"
-    ]
+    "objectID": "CramerRaoLowerBound.html#definition",
+    "href": "CramerRaoLowerBound.html#definition",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Definition",
+    "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\)."
+  },
+  {
+    "objectID": "CramerRaoLowerBound.html#proof",
+    "href": "CramerRaoLowerBound.html#proof",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Proof",
+    "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired."
   },
   {
     "objectID": "index.html",
@@ -155,15 +147,15 @@
     ]
   },
   {
-    "objectID": "FinalProject.html",
-    "href": "FinalProject.html",
-    "title": "Final Project",
+    "objectID": "wlln.html",
+    "href": "wlln.html",
+    "title": "Theorem Weak Law of Large Numbers",
     "section": "",
-    "text": "Welcome, my final project is about applying DeGroot Learning model on banking dataset availiable in Kaggle, and then using simulations to count and occurence and calculate the transition probability, finally, calculate the stationary distribution on the markov chain object.",
+    "text": "Weak Law of Large Numbers Let \\(X_1, X_2, \\ldots, X_n\\) be a random sample from a population that has finite mean \\(\\mu\\) and finite variance \\(\\sigma^2\\). Then, the sequence of sample means \\(\\bar{X}_n=\\sum_{i=1}^n \\frac{X_i}{n}\\) converges in probability to the population mean \\(\\mu\\).\nProof:\nThe idea is to apply Chebyshev’s Inequality to \\(\\bar{X}_n\\). In order to do this, we need to determine \\(E\\left(\\bar{X}_n\\right)\\) and \\(V\\left(\\bar{X}_n\\right)\\). Note that since \\(X_1, \\ldots, X_n\\) is a random sample from a population with mean \\(\\mu\\) and variance \\(\\sigma^2\\), it follows that, \\[\nE\\left(X_i\\right)=\\mu, \\quad V\\left(X_i\\right)=\\sigma^2 \\quad \\text { for all } i=1,2, \\ldots, n\n\\]\nWe can now calculate the mean and variance if \\(\\bar{X}_n\\). First, we have that \\[\nE\\left[\\bar{X}_n\\right]=E\\left(\\sum_{i=1}^n \\frac{X_i}{n}\\right)=\\frac{1}{n} \\sum_{i=1}^n E\\left(X_i\\right)=\\frac{n \\mu}{n}=\\mu\n\\]\nand, since the \\(X_i\\) ’s are independent, we have \\[\nV\\left(\\bar{X}_n\\right)=V\\left(\\sum_{i=1}^n \\frac{X_i}{n}\\right)=\\frac{1}{n^2} \\sum_{i=1}^n V\\left(X_i\\right)=\\frac{n \\sigma^2}{n^2}=\\frac{\\sigma^2}{n} .\n\\]\nWe can now apply Chebyshev’s Inequality. Fix \\(\\varepsilon&gt;0\\) and set \\(k=\\frac{\\sqrt{n} \\varepsilon}{\\sigma}\\). Then, Chebyshev’s Inequality applied to \\(\\bar{X}_n\\) implies that, \\[\nP\\left(\\left|\\bar{X}_n-\\mu\\right|&lt;\\frac{\\sqrt{n} \\varepsilon}{\\sigma} \\cdot \\frac{\\sigma}{\\sqrt{n}}\\right) \\geq 1-\\frac{1}{(\\sqrt{n} \\varepsilon / \\sigma)^2} \\Longrightarrow P\\left(\\left|\\bar{X}_n-\\mu\\right|&lt;\\varepsilon\\right) \\geq 1-\\frac{\\sigma}{n \\varepsilon^2} \\text { for all } n \\geq 1\n\\]\nSince this holds for all \\(n \\geq 1\\), we are permitted to let \\(n \\rightarrow \\infty\\). This yields, \\[\n\\lim _{n \\rightarrow \\infty} P\\left(\\left|\\bar{X}_n-\\mu\\right|&lt;\\varepsilon\\right) \\geq 1 \\Longrightarrow \\lim _{n \\rightarrow \\infty} P\\left(\\left|\\bar{X}_n-\\mu\\right|&lt;\\varepsilon\\right)=1\n\\]\nSince \\(\\varepsilon&gt;0\\) was fixed arbitrarily, this shows \\(\\bar{X}_n \\xrightarrow{p} \\mu\\).",
     "crumbs": [
       "Home",
-      "STAT403",
-      "Final Project"
+      "Proofs",
+      "Theorem Weak Law of Large Numbers"
     ]
   },
   {
@@ -443,39 +435,39 @@
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html",
-    "href": "CramérRaoLowerBound.html",
-    "title": "Cramér–Rao Lower Bound",
+    "objectID": "FinalProject.html",
+    "href": "FinalProject.html",
+    "title": "Final Project",
     "section": "",
-    "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB.",
+    "text": "Welcome, my final project is about applying DeGroot Learning model on banking dataset availiable in Kaggle, and then using simulations to count and occurence and calculate the transition probability, finally, calculate the stationary distribution on the markov chain object.",
     "crumbs": [
       "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
+      "STAT403",
+      "Final Project"
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html#definition",
-    "href": "CramérRaoLowerBound.html#definition",
-    "title": "Cramér–Rao Lower Bound",
-    "section": "Definition",
-    "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\).",
+    "objectID": "BrownBridge.html",
+    "href": "BrownBridge.html",
+    "title": "Brown Bridge",
+    "section": "",
+    "text": "Let \\(B_t\\) be standard Brownian motion, find the conditional distribution \\(B_s|B_t\\) for \\(0&lt;s&lt;t\\) .\nIf \\(B_s\\) is known, \\(B_t \\sim N(?,?)\\),consider the increment(Note they are independent):\n\\[\n\\begin{align*}\nB_t &= B_s + (B_t - B_s) \\\\\nE(B_t) &= E(B_s) + E(B_t - B_s | B_s) = B_s \\\\\nVar(B_t) &= E(B^2_t) - (E(B_t))^2 \\\\\n&= E\\left(B^2_s + (B_t - B_s)^2 + 2B_s(B_t - B_s)\\right) - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) + 0 - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) \\\\\n&= B_s^2 + (t - s) = t-s\n\\end{align*}\n\\]\nWhereas Brown Bridge is when \\(B_t\\) known\n\\[\nhh\n\\]",
     "crumbs": [
       "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
+      "Interviews",
+      "Brown Bridge"
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html#proof",
-    "href": "CramérRaoLowerBound.html#proof",
-    "title": "Cramér–Rao Lower Bound",
-    "section": "Proof",
-    "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired.",
+    "objectID": "BrownBridge.html#question",
+    "href": "BrownBridge.html#question",
+    "title": "Brown Bridge",
+    "section": "",
+    "text": "Let \\(B_t\\) be standard Brownian motion, find the conditional distribution \\(B_s|B_t\\) for \\(0&lt;s&lt;t\\) .\nIf \\(B_s\\) is known, \\(B_t \\sim N(?,?)\\),consider the increment(Note they are independent):\n\\[\n\\begin{align*}\nB_t &= B_s + (B_t - B_s) \\\\\nE(B_t) &= E(B_s) + E(B_t - B_s | B_s) = B_s \\\\\nVar(B_t) &= E(B^2_t) - (E(B_t))^2 \\\\\n&= E\\left(B^2_s + (B_t - B_s)^2 + 2B_s(B_t - B_s)\\right) - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) + 0 - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) \\\\\n&= B_s^2 + (t - s) = t-s\n\\end{align*}\n\\]\nWhereas Brown Bridge is when \\(B_t\\) known\n\\[\nhh\n\\]",
     "crumbs": [
       "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
+      "Interviews",
+      "Brown Bridge"
     ]
   },
   {
@@ -503,31 +495,39 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I love boobs.\nI bench 70KG + squat 110KG + dead lift 120KG = 300KG"
+    "objectID": "Simulations.html#stationary-distribution",
+    "href": "Simulations.html#stationary-distribution",
+    "title": "CourseSimulatioinExamples",
+    "section": "Stationary Distribution",
+    "text": "Stationary Distribution",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseSimulatioinExamples"
+    ]
   },
   {
-    "objectID": "proofs.html",
-    "href": "proofs.html",
-    "title": "Proofs",
-    "section": "",
-    "text": "For study purposes only"
+    "objectID": "Simulations.html#poisson-process",
+    "href": "Simulations.html#poisson-process",
+    "title": "CourseSimulatioinExamples",
+    "section": "Poisson Process",
+    "text": "Poisson Process",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseSimulatioinExamples"
+    ]
   },
   {
-    "objectID": "proofs.html#description",
-    "href": "proofs.html#description",
-    "title": "Proofs",
-    "section": "",
-    "text": "For study purposes only"
-  },
-  {
-    "objectID": "proofs.html#proofs-library",
-    "href": "proofs.html#proofs-library",
-    "title": "Proofs",
-    "section": "Proofs Library",
-    "text": "Proofs Library\n\n\n\nProofs with Coding\nProofs"
+    "objectID": "Simulations.html#brownian-motion",
+    "href": "Simulations.html#brownian-motion",
+    "title": "CourseSimulatioinExamples",
+    "section": "Brownian Motion",
+    "text": "Brownian Motion",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseSimulatioinExamples"
+    ]
   }
 ]
