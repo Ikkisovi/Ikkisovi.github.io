@@ -209,6 +209,12 @@ window.Quarto = {
  <span class="menu-text">CourseSimulatioinExamples</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Brownian.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brownian Motion</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -265,6 +271,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./q1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SumExceptation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./BrownBridge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brown Bridge</span></a>
   </div>
 </li>
       </ul>
@@ -364,11 +376,16 @@ u_2 = 0.5(1+u_0+0.5)
 <p>To understand this, think about u_0 first, 0.5(1+u_0) means, there’s 0.5 chance the first throw is not H, hence waste this step, and plus itself step u_0, and 0.5(1+u_1) is assuming the first toss is H already, we are remaining u_1 step, due to 0.5+0.5 =1 has to be, there’s no terms for u_2.</p>
 <section id="dices" class="level3">
 <h3 class="anchored" data-anchor-id="dices">Dices</h3>
-<p>Expected sum for throwing 6 side dices, until the first 1 is appear.</p>
+<p><strong>Expected sum</strong> for throwing 6 side dices, until the first 1 is appear.</p>
 <p>thoughts: Dice is a discrete uniform distribution. Using Law of total expectation could find the expected tosses of getting a 1:</p>
 <p><span class="math display">\[
-E = \frac{1}{6}*0+ \frac{5}{6}(1+E)
+E = \frac{1}{6}*0+ \frac{5}{6}(1+E) = 5
 \]</span></p>
+<p>5/6 chance to throw not a 1, 1/6 chance to throw 1 at the first time.</p>
+<p><span class="math display">\[
+E(sum) = 5 * \frac{2+3+4+5+6}{5}+1=21
+\]</span></p>
+<p>first term indicate the expected sum on the mean 5 tosses not getting a 1 ,plus 1 indicate the 1 toss that get a 1.</p>
 
 
 </section>

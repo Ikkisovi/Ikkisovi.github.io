@@ -180,6 +180,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">CourseSimulatioinExamples</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Brownian.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brownian Motion</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +244,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">SumExceptation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./BrownBridge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Brown Bridge</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -294,32 +306,41 @@ ul.task-list li input[type="checkbox"] {
 }
 
 .message-board input,
-.message-board textarea, /* Added textarea for consistency */
+.message-board textarea,
 .message-board button {
-    display: block; /* Ensures full width */
+    display: block; /* Ensures full-width */
     width: calc(100% - 20px); /* Full width minus padding */
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0; /* Consistent margin for top and bottom */
+    padding: 5px; /* Added padding for better UX */
 }
 
 .message {
-    border-bottom: 1px solid #ccc;
-    padding: 5px;
+    background-color: #f0f0f0; /* Matches the message box */
+    border: 1px solid #0078d7;
+    margin: 10px 0; /* Added some margin to separate the messages */
+    padding: 5px 10px; /* Padding inside the message boxes */
+    border-radius: 4px; /* Optional: adds rounded corners to the message boxes */
+}
+
+/* Optional: styles for the display container of messages */
+#messageDisplay {
+    margin: auto; /* Center the message display area */
+    width: 300px; /* Match the width of the message board */
 }
 </style>
 
 <!-- Image button to open the message board -->
-<img src="images/IMG_4116-01.jpg" id="messageBoardButton" style="width: 350px; cursor: pointer; display: block; margin-left: auto; margin-right: auto;">
+<img src="images/IMG_4116-01.jpg" id="messageBoardButton" style="width: 350px; cursor: pointer; display: block; margin: auto;">
 
-<div class="message-board" id="messageBoard" style="display: none;">
-  ...  <input type="text" id="userName" placeholder="Your name">
+<div class="container"> <!-- Added container to wrap around the message board-->
+    <div class="message-board" id="messageBoard" style="display: none;">
+        <input type="text" id="userName" placeholder="Your name">
         <textarea id="userMessage" placeholder="Your message"></textarea>
         <button onclick="submitMessage()">Submit</button>
     </div>
-</main></div>
+</div>
 
-
-<div id="messageDisplay"></div>
+<div id="messageDisplay"></div> <!-- This div shows the submitted messages -->
 
 <script>
 // Existing JavaScript for the message board
@@ -377,7 +398,7 @@ document.getElementById('messageBoardButton').addEventListener('click', toggleMe
 
 
 
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -765,7 +786,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 

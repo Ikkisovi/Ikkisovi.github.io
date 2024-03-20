@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Jikai Fang - CourseTopic</title>
+<title>Jikai Fang - Brownian Motion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -115,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./STAT205.html">STAT205</a></li><li class="breadcrumb-item"><a href="./STAT205.html">CourseTopic</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CourseMaterial.html">STAT403</a></li><li class="breadcrumb-item"><a href="./Brownian.html">Brownian Motion</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -182,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Brownian.html" class="sidebar-item-text sidebar-link">
+  <a href="./Brownian.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Brownian Motion</span></a>
   </div>
 </li>
@@ -199,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./STAT205.html" class="sidebar-item-text sidebar-link active">
+  <a href="./STAT205.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CourseTopic</span></a>
   </div>
 </li>
@@ -258,14 +287,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#theory" id="toc-theory" class="nav-link active" data-scroll-target="#theory">Theory</a></li>
+  <li><a href="#wiener-process" id="toc-wiener-process" class="nav-link" data-scroll-target="#wiener-process">Wiener Process</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#in-variance-principle" id="toc-in-variance-principle" class="nav-link" data-scroll-target="#in-variance-principle">In variance Principle</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./STAT205.html">STAT205</a></li><li class="breadcrumb-item"><a href="./STAT205.html">CourseTopic</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./CourseMaterial.html">STAT403</a></li><li class="breadcrumb-item"><a href="./Brownian.html">Brownian Motion</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">CourseTopic</h1>
+<h1 class="title">Brownian Motion</h1>
 </div>
 
 
@@ -282,8 +322,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="theory" class="level2">
+<h2 class="anchored" data-anchor-id="theory">Theory</h2>
+<ul>
+<li><p>Conditional Probability</p></li>
+<li><p>Convergence. (Rate <span class="math inline">\(O_p\)</span>)</p>
+<ul>
+<li><p>Derive from Chebyshev’s inequality</p></li>
+<li><p><span class="math display">\[
+\bar{X_n} - \mu = O(\frac{1}{\sqrt{n}})
+\]</span></p></li>
+<li><p><span class="math display">\[
+P(|\bar{X_n} - \mu| &gt; \frac{M}{\sqrt{n}}) &lt;= \frac{\mu^2}{M^2} &lt; \epsilon
+\]</span></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="wiener-process" class="level2">
+<h2 class="anchored" data-anchor-id="wiener-process">Wiener Process</h2>
+<p><span class="math display">\[
+P(B(t)&lt;= y | B(0) = x) = \phi(\frac{y-x}{\sqrt t})
+\]</span></p>
+<p>Using Markov property, this equals:</p>
+<p><span class="math display">\[
+P(B(t)-B(0) &lt;= y-x
+\]</span></p>
+<section id="definition" class="level3">
+<h3 class="anchored" data-anchor-id="definition">Definition</h3>
+<p>Brownian motion is a stochastic process {<span class="math inline">\(B(t) ; t&gt;=0\)</span>} with properties:</p>
+<ul>
+<li><p>Every increment <span class="math inline">\(B(s+t)-B(s)\)</span> is normal distributed</p></li>
+<li><p>For every pair of disjoint time intervals, the increments are independent</p></li>
+</ul>
+</section>
+<section id="in-variance-principle" class="level3">
+<h3 class="anchored" data-anchor-id="in-variance-principle">In variance Principle</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

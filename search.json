@@ -132,50 +132,74 @@
     ]
   },
   {
+    "objectID": "Simulations.html#brownian-motion",
+    "href": "Simulations.html#brownian-motion",
+    "title": "CourseSimulatioinExamples",
+    "section": "Brownian Motion",
+    "text": "Brownian Motion",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseSimulatioinExamples"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Jikai Fang",
     "section": "",
-    "text": "Nice to meet you. fangjk@student.ubc.ca\n\n\n\nFeel Free to Click the image below to Comment↓\n\n\n\n\n\n\n\n\n  ...  \n        \n        Submit",
+    "text": "Nice to meet you. fangjk@student.ubc.ca\n\n\n\nFeel Free to Click the image below to Comment↓\n\n\n\n\n\n\n\n \n    \n        \n        \n        Submit",
     "crumbs": [
       "Home",
       "Jikai Fang"
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html",
-    "href": "CramérRaoLowerBound.html",
-    "title": "Cramér–Rao Lower Bound",
+    "objectID": "FinalProject.html",
+    "href": "FinalProject.html",
+    "title": "Final Project",
     "section": "",
-    "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB.",
+    "text": "Welcome, my final project is about applying DeGroot Learning model on banking dataset availiable in Kaggle, and then using simulations to count and occurence and calculate the transition probability, finally, calculate the stationary distribution on the markov chain object.",
     "crumbs": [
       "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
+      "STAT403",
+      "Final Project"
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html#definition",
-    "href": "CramérRaoLowerBound.html#definition",
-    "title": "Cramér–Rao Lower Bound",
-    "section": "Definition",
-    "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\).",
+    "objectID": "Brownian.html",
+    "href": "Brownian.html",
+    "title": "Brownian Motion",
+    "section": "",
+    "text": "Conditional Probability\nConvergence. (Rate \\(O_p\\))\n\nDerive from Chebyshev’s inequality\n\\[\n\\bar{X_n} - \\mu = O(\\frac{1}{\\sqrt{n}})\n\\]\n\\[\nP(|\\bar{X_n} - \\mu| &gt; \\frac{M}{\\sqrt{n}}) &lt;= \\frac{\\mu^2}{M^2} &lt; \\epsilon\n\\]",
     "crumbs": [
       "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
+      "STAT403",
+      "Brownian Motion"
     ]
   },
   {
-    "objectID": "CramérRaoLowerBound.html#proof",
-    "href": "CramérRaoLowerBound.html#proof",
-    "title": "Cramér–Rao Lower Bound",
-    "section": "Proof",
-    "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired.",
+    "objectID": "Brownian.html#theory",
+    "href": "Brownian.html#theory",
+    "title": "Brownian Motion",
+    "section": "",
+    "text": "Conditional Probability\nConvergence. (Rate \\(O_p\\))\n\nDerive from Chebyshev’s inequality\n\\[\n\\bar{X_n} - \\mu = O(\\frac{1}{\\sqrt{n}})\n\\]\n\\[\nP(|\\bar{X_n} - \\mu| &gt; \\frac{M}{\\sqrt{n}}) &lt;= \\frac{\\mu^2}{M^2} &lt; \\epsilon\n\\]",
     "crumbs": [
       "Home",
-      "STAT205",
-      "Cramér–Rao Lower Bound"
+      "STAT403",
+      "Brownian Motion"
+    ]
+  },
+  {
+    "objectID": "Brownian.html#wiener-process",
+    "href": "Brownian.html#wiener-process",
+    "title": "Brownian Motion",
+    "section": "Wiener Process",
+    "text": "Wiener Process\n\\[\nP(B(t)&lt;= y | B(0) = x) = \\phi(\\frac{y-x}{\\sqrt t})\n\\]\nUsing Markov property, this equals:\n\\[\nP(B(t)-B(0) &lt;= y-x\n\\]\n\nDefinition\nBrownian motion is a stochastic process {\\(B(t) ; t&gt;=0\\)} with properties:\n\nEvery increment \\(B(s+t)-B(s)\\) is normal distributed\nFor every pair of disjoint time intervals, the increments are independent\n\n\n\nIn variance Principle",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Brownian Motion"
     ]
   },
   {
@@ -411,7 +435,7 @@
     "href": "Q1-2.html#q4-throw-coins-dices",
     "title": "Q1-2",
     "section": "Q4 Throw Coins, dices",
-    "text": "Q4 Throw Coins, dices\nThrow coins can be converted to a markov chain question, Expected step to recurrent states\ndraw a graph solving this: Expected number of throwing HHH sequence:\n\\[\n\\begin{align}\nu_0=0.5(1+u_0)+0.5(1+u_1)=1+0.5u_0+0.5u_1 \\\\\nu_1 =0.5(1+u_0)+0.5(1+u_2)\\\\\nu_2 = 0.5(1+u_0+0.5)\n\\end{align}\n\\]\nNote, u_0 are steps from that state to the recurrent state.\nTo understand this, think about u_0 first, 0.5(1+u_0) means, there’s 0.5 chance the first throw is not H, hence waste this step, and plus itself step u_0, and 0.5(1+u_1) is assuming the first toss is H already, we are remaining u_1 step, due to 0.5+0.5 =1 has to be, there’s no terms for u_2.\n\nDices\nExpected sum for throwing 6 side dices, until the first 1 is appear.\nthoughts: Dice is a discrete uniform distribution. Using Law of total expectation could find the expected tosses of getting a 1:\n\\[\nE = \\frac{1}{6}*0+ \\frac{5}{6}(1+E)\n\\]",
+    "text": "Q4 Throw Coins, dices\nThrow coins can be converted to a markov chain question, Expected step to recurrent states\ndraw a graph solving this: Expected number of throwing HHH sequence:\n\\[\n\\begin{align}\nu_0=0.5(1+u_0)+0.5(1+u_1)=1+0.5u_0+0.5u_1 \\\\\nu_1 =0.5(1+u_0)+0.5(1+u_2)\\\\\nu_2 = 0.5(1+u_0+0.5)\n\\end{align}\n\\]\nNote, u_0 are steps from that state to the recurrent state.\nTo understand this, think about u_0 first, 0.5(1+u_0) means, there’s 0.5 chance the first throw is not H, hence waste this step, and plus itself step u_0, and 0.5(1+u_1) is assuming the first toss is H already, we are remaining u_1 step, due to 0.5+0.5 =1 has to be, there’s no terms for u_2.\n\nDices\nExpected sum for throwing 6 side dices, until the first 1 is appear.\nthoughts: Dice is a discrete uniform distribution. Using Law of total expectation could find the expected tosses of getting a 1:\n\\[\nE = \\frac{1}{6}*0+ \\frac{5}{6}(1+E) = 5\n\\]\n5/6 chance to throw not a 1, 1/6 chance to throw 1 at the first time.\n\\[\nE(sum) = 5 * \\frac{2+3+4+5+6}{5}+1=21\n\\]\nfirst term indicate the expected sum on the mean 5 tosses not getting a 1 ,plus 1 indicate the 1 toss that get a 1.",
     "crumbs": [
       "Home",
       "Interviews",
@@ -419,15 +443,39 @@
     ]
   },
   {
-    "objectID": "FinalProject.html",
-    "href": "FinalProject.html",
-    "title": "Final Project",
+    "objectID": "CramérRaoLowerBound.html",
+    "href": "CramérRaoLowerBound.html",
+    "title": "Cramér–Rao Lower Bound",
     "section": "",
-    "text": "Welcome, my final project is about applying DeGroot Learning model on banking dataset availiable in Kaggle, and then using simulations to count and occurence and calculate the transition probability, finally, calculate the stationary distribution on the markov chain object.",
+    "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB.",
     "crumbs": [
       "Home",
-      "STAT403",
-      "Final Project"
+      "STAT205",
+      "Cramér–Rao Lower Bound"
+    ]
+  },
+  {
+    "objectID": "CramérRaoLowerBound.html#definition",
+    "href": "CramérRaoLowerBound.html#definition",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Definition",
+    "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\).",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Cramér–Rao Lower Bound"
+    ]
+  },
+  {
+    "objectID": "CramérRaoLowerBound.html#proof",
+    "href": "CramérRaoLowerBound.html#proof",
+    "title": "Cramér–Rao Lower Bound",
+    "section": "Proof",
+    "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired.",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Cramér–Rao Lower Bound"
     ]
   },
   {
@@ -435,7 +483,7 @@
     "href": "CourseMaterial.html",
     "title": "CourseMaterial-Stochastic-Process",
     "section": "",
-    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process\nBrownian Motion",
     "crumbs": [
       "Home",
       "STAT403",
@@ -447,7 +495,7 @@
     "href": "CourseMaterial.html#table-of-content",
     "title": "CourseMaterial-Stochastic-Process",
     "section": "",
-    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process",
+    "text": "Discrete time Markov Chain\nLimiting behavior\n\nStationary Distribution\n\nSome models\nPoisson Process\n\nCompound Process - functions as support, apply law of total expectation and variance often\n\nGaussian Process\nBrownian Motion",
     "crumbs": [
       "Home",
       "STAT403",
