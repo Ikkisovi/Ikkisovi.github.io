@@ -254,7 +254,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CramerRaoLowerBound.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cramér–Rao Lower Bound</span></a>
+ <span class="menu-text">Cramer Rao Lower Bound</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -277,7 +277,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Q1-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Q1-2</span></a>
+ <span class="menu-text">Q1-4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -310,6 +310,9 @@ window.Quarto = {
   <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
   <li><a href="#in-variance-principle" id="toc-in-variance-principle" class="nav-link" data-scroll-target="#in-variance-principle">In variance Principle</a></li>
   </ul></li>
+  <li><a href="#example-16.2" id="toc-example-16.2" class="nav-link" data-scroll-target="#example-16.2">Example 16.2</a></li>
+  <li><a href="#example-16.3" id="toc-example-16.3" class="nav-link" data-scroll-target="#example-16.3">Example 16.3</a></li>
+  <li><a href="#example-16.5" id="toc-example-16.5" class="nav-link" data-scroll-target="#example-16.5">Example 16.5</a></li>
   </ul>
 </nav>
     </div>
@@ -354,12 +357,13 @@ P(|\bar{X_n} - \mu| &gt; \frac{M}{\sqrt{n}}) &lt;= \frac{\mu^2}{M^2} &lt; \epsil
 <section id="wiener-process" class="level2">
 <h2 class="anchored" data-anchor-id="wiener-process">Wiener Process</h2>
 <p><span class="math display">\[
-P(B(t)&lt;= y | B(0) = x) = \phi(\frac{y-x}{\sqrt t})
+P(B(t)&lt;= y | B(0) = x) = \Phi(\frac{y-x}{\sqrt t})
 \]</span></p>
 <p>Using Markov property, this equals:</p>
 <p><span class="math display">\[
 P(B(t)-B(0) &lt;= y-x
 \]</span></p>
+<p>We have <span class="math inline">\(P\{B(s+t) \leq\)</span> <span class="math inline">\(y \mid B(s)=x\}=P\{B(s+t)-B(s) \leq y-x\}=\Phi\left(\frac{y-x}{\sqrt{t}}\right)\)</span> By part (b), <span class="math inline">\(\operatorname{Cov}\{B(s), B(t)\}=\min (s, t)\)</span>. for <span class="math inline">\(s, t \geq 0\)</span>.</p>
 <section id="definition" class="level3">
 <h3 class="anchored" data-anchor-id="definition">Definition</h3>
 <p>Brownian motion is a stochastic process {<span class="math inline">\(B(t) ; t&gt;=0\)</span>} with properties:</p>
@@ -370,9 +374,29 @@ P(B(t)-B(0) &lt;= y-x
 </section>
 <section id="in-variance-principle" class="level3">
 <h3 class="anchored" data-anchor-id="in-variance-principle">In variance Principle</h3>
-
-
 </section>
+</section>
+<section id="example-16.2" class="level2">
+<h2 class="anchored" data-anchor-id="example-16.2">Example 16.2</h2>
+<p>Evaluate <span class="math inline">\(E[e^{\lambda B(t)}]\)</span> for an arbitrary constant <span class="math inline">\(\lambda\)</span> and Brownian motion B(T)</p>
+<p><em>Solution</em>: Use MGF of normal dist N(0,t), sub in the values. <span class="math inline">\(e^{\lambda^2 t/2}\)</span></p>
+</section>
+<section id="example-16.3" class="level2">
+<h2 class="anchored" data-anchor-id="example-16.3">Example 16.3</h2>
+<p>Find the variance of linear combinations of <span class="math inline">\(B(t)\)</span>, using</p>
+<p><span class="math display">\[
+\sum_{i=1}^{n} \sum_{j=1}^{n} a_ia_j min{t_i,t_j}
+\]</span></p>
+<p>Solution: the variance of <span class="math inline">\(\sum_{i=1}^{n}a_iB(t_i)\)</span> is <span class="math inline">\(Var(\sum_{i=1}^{n} a_iB_i)\)</span></p>
+<p><span class="math display">\[
+=Cov(\sum_{i}^{n} a_iB_i,\sum_{j}^{n} a_jB_j),using ，Cov(B_s,B_t) = min(t_s,t_i)
+\]</span></p>
+</section>
+<section id="example-16.5" class="level2">
+<h2 class="anchored" data-anchor-id="example-16.5">Example 16.5</h2>
+<p>a. s&lt;t = e<sup>(s-t)</sup> s&gt;t = e^(t-s)</p>
+
+
 </section>
 
 </main> <!-- /main -->

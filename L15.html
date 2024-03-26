@@ -254,7 +254,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CramerRaoLowerBound.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cramér–Rao Lower Bound</span></a>
+ <span class="menu-text">Cramer Rao Lower Bound</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -277,7 +277,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Q1-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Q1-2</span></a>
+ <span class="menu-text">Q1-4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -309,9 +309,14 @@ window.Quarto = {
   <li><a href="#sampling-distribution-of-the-difference-in-sample-means" id="toc-sampling-distribution-of-the-difference-in-sample-means" class="nav-link" data-scroll-target="#sampling-distribution-of-the-difference-in-sample-means">Sampling Distribution of the Difference in Sample Means</a>
   <ul class="collapse">
   <li><a href="#two-sample-z-statistic" id="toc-two-sample-z-statistic" class="nav-link" data-scroll-target="#two-sample-z-statistic">Two-sample Z statistic</a></li>
+  </ul></li>
+  <li><a href="#proposition" id="toc-proposition" class="nav-link" data-scroll-target="#proposition">PROPOSITION</a></li>
+  <li><a href="#welch-theorem" id="toc-welch-theorem" class="nav-link" data-scroll-target="#welch-theorem">Welch THEOREM</a>
+  <ul class="collapse">
   <li><a href="#unknown-variance" id="toc-unknown-variance" class="nav-link" data-scroll-target="#unknown-variance">Unknown Variance</a></li>
   <li><a href="#pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right" id="toc-pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right" class="nav-link" data-scroll-target="#pooled-t-test-for-the-difference-of-means-for-independent-groups-leftsigma_12sigma_22right">Pooled t-test for the Difference of means for Independent Groups <span class="math inline">\(\left(\sigma_1^2=\sigma_2^2\right)\)</span></a></li>
   </ul></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples:</a></li>
   </ul>
 </nav>
     </div>
@@ -361,6 +366,23 @@ X_1-X_2 \sim \text { Normal }\left(\mu_1-\mu_2, S E=\sqrt{\frac{\sigma_1^2}{n_1}
 Z=\frac{\bar{X}_1-\bar{X}_2-\delta}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
 \]</span> follows a standard normal distribution. This will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( <span class="math inline">\(n\)</span> <span class="math inline">\(\geq 30)\)</span> samples from non-normal populations thanks to CLT.</p>
 </section>
+</section>
+<section id="proposition" class="level2">
+<h2 class="anchored" data-anchor-id="proposition">PROPOSITION</h2>
+<p>The expected value of <span class="math inline">\(\bar{X}-\bar{Y}\)</span> is <span class="math inline">\(\mu_1-\mu_2\)</span>, so <span class="math inline">\(\bar{X}-\bar{Y}\)</span> is an unbiased estimator of <span class="math inline">\(\mu_1-\mu_2\)</span>. The standard deviation of <span class="math inline">\(\bar{X}-\bar{Y}\)</span> is <span class="math display">\[
+\sigma_{\bar{X}-\bar{Y}}=\sqrt{\frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n}}
+\]</span></p>
+<p>Proof: Based on independents, easy to think of <span class="math inline">\(V(X-Y) = V(X)+V(Y)\)</span></p>
+</section>
+<section id="welch-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="welch-theorem">Welch THEOREM</h2>
+<p>When the population distributions are both normal, the standardized variable <span class="math display">\[
+T=\frac{\bar{X}-\bar{Y}-\left(\mu_1-\mu_2\right)}{\sqrt{\frac{S_1^2}{m}+\frac{S_2^2}{n}}}
+\]</span> has approximately a <span class="math inline">\(t\)</span> distribution with df <span class="math inline">\(v\)</span> estimated from the data by <span class="math display">\[
+v=\frac{\left(\frac{s_1^2}{m}+\frac{s_2^2}{n}\right)^2}{\frac{\left(s_1^2 / m\right)^2}{m-1}+\frac{\left(s_2^2 / n\right)^2}{n-1}}=\frac{\left[\left(s e_1\right)^2+\left(s e_2\right)^2\right]^2}{\frac{\left(s e_1\right)^4}{m-1}+\frac{\left(s e_2\right)^4}{n-1}}
+\]</span> where <span class="math display">\[
+s e_1=\frac{s_1}{\sqrt{m}} \quad s e_2=\frac{s_2}{\sqrt{n}}
+\]</span></p>
 <section id="unknown-variance" class="level3">
 <h3 class="anchored" data-anchor-id="unknown-variance">Unknown Variance</h3>
 <p>Follows a t distribution of course, this is for assuming equal variance and t <span class="math inline">\(\sim n_1+n_2-2\)</span>in addition if unknown if equal variance:</p>
@@ -377,9 +399,17 @@ s_1^2=\frac{\sum_{i=1}^{n_1}\left(x_{1 i}-\bar{x}_1\right)^2}{n_1-1} \quad s_2^2
 <p><span class="math inline">\(H_0: \mu_1-\mu_2=\delta_0 \quad H_A: \begin{cases}\mu_1-\mu_2 \neq \delta_0 &amp; \text { two-sided test } \\ \mu_1-\mu_2&lt;\delta_0 &amp; \text { one-sided (lower-tail) test } \\ \mu_1-\mu_2&gt;\delta_0 &amp; \text { one-sided (upper-tail) test }\end{cases}\)</span> 2. Test Statistic: <span class="math inline">\(\quad T=\frac{\bar{X}_1-\bar{X}_2-\delta}{s_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t_\nu\)</span> where <span class="math inline">\(\nu=n_1+n_2-2\)</span> where <span class="math inline">\(s_p\)</span> is the square-root of the pooled variance: <span class="math display">\[
 s_p^2=\frac{\left(n_1-1\right) s_1^2+\left(n_2-1\right) s_2^2}{n_1+n_2-2}
 \]</span></p>
-
-
 </section>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples:</h2>
+<p>chicken beans:</p>
+<ul>
+<li><p>soy meal: <span class="math inline">\(\bar{x_1}= 246.43, s_1 =54.13, n_1=14\)</span></p></li>
+<li><p>meat meal: <span class="math inline">\(\bar{x_2}=276.91,s_2=64.9, n_2=11\)</span></p></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->

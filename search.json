@@ -117,37 +117,37 @@
   {
     "objectID": "CramerRaoLowerBound.html",
     "href": "CramerRaoLowerBound.html",
-    "title": "Cramér–Rao Lower Bound",
+    "title": "Cramer Rao Lower Bound",
     "section": "",
     "text": "Given a statistical model \\(X P_\\theta\\) with a fixed true parameter \\(\\theta\\), the Cramér–Rao lower bound (CRLB) provides a lower bound on the variance of an estimator T(X). The CRLB is useful because if an unbiased estimator achieves the CRLB, it must be a uniformly minimum–variance unbiased estimator , which achieves 2 points,\nbecause it is unbiased by construction and has minimum variance by the CRLB.",
     "crumbs": [
       "Home",
       "STAT205",
-      "Cramér–Rao Lower Bound"
+      "Cramer Rao Lower Bound"
     ]
   },
   {
     "objectID": "CramerRaoLowerBound.html#definition",
     "href": "CramerRaoLowerBound.html#definition",
-    "title": "Cramér–Rao Lower Bound",
+    "title": "Cramer Rao Lower Bound",
     "section": "Definition",
     "text": "Definition\nCRLB: Let \\(X=\\left(X_1, \\ldots, X_N\\right) \\in \\mathbb{R}^N\\) be a random vector with joint density \\(f(X ; \\theta)\\) where \\(\\theta \\in\\) \\(\\Theta \\subseteq \\mathbb{R}\\). Let \\(T(X)\\) be a biased estimator of \\(\\theta\\). Assume the Fisher information is always defined and that the operations of integration with respect to \\(X\\) and differention with respect to \\(\\theta\\) can be interchanged. Then \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{d}{d \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{d}{d \\theta} \\log f(X ; \\theta)\\right)^2\\right]} \\equiv \\operatorname{CRLB}(\\theta)\n\\]\nThe denominator of the CRLB is the Fisher information. If the estimator is unbiased, then the numerator is one since \\(\\mathbb{E}[T(X)]=\\theta\\).",
     "crumbs": [
       "Home",
       "STAT205",
-      "Cramér–Rao Lower Bound"
+      "Cramer Rao Lower Bound"
     ]
   },
   {
     "objectID": "CramerRaoLowerBound.html#proof",
     "href": "CramerRaoLowerBound.html#proof",
-    "title": "Cramér–Rao Lower Bound",
+    "title": "Cramer Rao Lower Bound",
     "section": "Proof",
     "text": "Proof\nTo prove the CRLB, let \\(W\\) and \\(Y\\) be two random variables. In general, \\(\\mathbb{E}[W] \\neq 0\\) and \\(\\mathbb{E}[Y] \\neq 0\\). However, assume \\(\\mathbb{E}[Y]=0\\). A property of covariance is \\[\n(\\operatorname{Cov}[W, Y])^2 \\leq \\mathbb{V}[W] \\mathbb{V}[Y] .\n\\]\nThis can be derived by applying Cauchy-Schwarz to random variables (see the Appendix). Now set \\(W\\) and \\(Y\\) to \\[\nW=T(X), \\quad Y=\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\n\\]\nWe know that the expectation of the score is zero. Therefore, \\(\\mathbb{E}[Y]=0\\) as desired. Then Equation 2 can be rewritten as \\[\n\\begin{aligned}\n\\mathbb{V}[T(X)] \\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & \\geq\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2 \\\\\n\\mathbb{V}[T(X)] & \\geq \\frac{\\left(\\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]\\right)^2}{\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}\n\\end{aligned}\n\\]\nThe numerator is our desired quantity. Ignoring the square, we have \\[\n\\begin{aligned}\n& \\operatorname{Cov}\\left[T(X), \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] \\\\\n& =\\mathbb{E}\\left[T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]-\\overbrace{\\mathbb{E}[T(X)] \\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]}^{=0} \\\\\n& =\\int T(X) \\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\triangleq \\int T(X) \\frac{\\partial}{\\partial \\theta} f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& \\stackrel{\\dagger}{=} \\frac{\\partial}{\\partial \\theta} \\int T(X) f(X ; \\theta) \\mathrm{d} \\mu(X) \\\\\n& =\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)] .\n\\end{aligned}\n\\]\nIn step \\(\\star\\), we use the fact that if \\(g(x)=\\log h(x)\\), then \\(g^{\\prime}(x)=h^{\\prime}(x) / h(x)\\). In step \\(\\dagger\\), we use our assumption that we can interchange integration and differention.\nThe denominator is the desired quantity because \\[\n\\begin{aligned}\n\\mathbb{V}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right] & =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]-\\mathbb{E}\\left[\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right]^2 \\\\\n& =\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]\n\\end{aligned}\n\\]\nPutting these results together in Equation 4, we have \\[\n\\mathbb{V}[T(X)] \\geq \\frac{\\left(\\frac{\\partial}{\\partial \\theta} \\mathbb{E}[T(X)]\\right)^2}{\\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial \\theta} \\log f(X ; \\theta)\\right)^2\\right]}\n\\] as desired.",
     "crumbs": [
       "Home",
       "STAT205",
-      "Cramér–Rao Lower Bound"
+      "Cramer Rao Lower Bound"
     ]
   },
   {
@@ -202,7 +202,43 @@
     "href": "Brownian.html#wiener-process",
     "title": "Brownian Motion",
     "section": "Wiener Process",
-    "text": "Wiener Process\n\\[\nP(B(t)&lt;= y | B(0) = x) = \\phi(\\frac{y-x}{\\sqrt t})\n\\]\nUsing Markov property, this equals:\n\\[\nP(B(t)-B(0) &lt;= y-x\n\\]\n\nDefinition\nBrownian motion is a stochastic process {\\(B(t) ; t&gt;=0\\)} with properties:\n\nEvery increment \\(B(s+t)-B(s)\\) is normal distributed\nFor every pair of disjoint time intervals, the increments are independent\n\n\n\nIn variance Principle",
+    "text": "Wiener Process\n\\[\nP(B(t)&lt;= y | B(0) = x) = \\Phi(\\frac{y-x}{\\sqrt t})\n\\]\nUsing Markov property, this equals:\n\\[\nP(B(t)-B(0) &lt;= y-x\n\\]\nWe have \\(P\\{B(s+t) \\leq\\) \\(y \\mid B(s)=x\\}=P\\{B(s+t)-B(s) \\leq y-x\\}=\\Phi\\left(\\frac{y-x}{\\sqrt{t}}\\right)\\) By part (b), \\(\\operatorname{Cov}\\{B(s), B(t)\\}=\\min (s, t)\\). for \\(s, t \\geq 0\\).\n\nDefinition\nBrownian motion is a stochastic process {\\(B(t) ; t&gt;=0\\)} with properties:\n\nEvery increment \\(B(s+t)-B(s)\\) is normal distributed\nFor every pair of disjoint time intervals, the increments are independent\n\n\n\nIn variance Principle",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Brownian Motion"
+    ]
+  },
+  {
+    "objectID": "Brownian.html#example-16.2",
+    "href": "Brownian.html#example-16.2",
+    "title": "Brownian Motion",
+    "section": "Example 16.2",
+    "text": "Example 16.2\nEvaluate \\(E[e^{\\lambda B(t)}]\\) for an arbitrary constant \\(\\lambda\\) and Brownian motion B(T)\nSolution: Use MGF of normal dist N(0,t), sub in the values. \\(e^{\\lambda^2 t/2}\\)",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Brownian Motion"
+    ]
+  },
+  {
+    "objectID": "Brownian.html#example-16.3",
+    "href": "Brownian.html#example-16.3",
+    "title": "Brownian Motion",
+    "section": "Example 16.3",
+    "text": "Example 16.3\nFind the variance of linear combinations of \\(B(t)\\), using\n\\[\n\\sum_{i=1}^{n} \\sum_{j=1}^{n} a_ia_j min{t_i,t_j}\n\\]\nSolution: the variance of \\(\\sum_{i=1}^{n}a_iB(t_i)\\) is \\(Var(\\sum_{i=1}^{n} a_iB_i)\\)\n\\[\n=Cov(\\sum_{i}^{n} a_iB_i,\\sum_{j}^{n} a_jB_j),using ，Cov(B_s,B_t) = min(t_s,t_i)\n\\]",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "Brownian Motion"
+    ]
+  },
+  {
+    "objectID": "Brownian.html#example-16.5",
+    "href": "Brownian.html#example-16.5",
+    "title": "Brownian Motion",
+    "section": "Example 16.5",
+    "text": "Example 16.5\na. s&lt;t = e(s-t) s&gt;t = e^(t-s)",
     "crumbs": [
       "Home",
       "STAT403",
@@ -322,7 +358,43 @@
     "href": "L15.html#sampling-distribution-of-the-difference-in-sample-means",
     "title": "Interference of Two Means",
     "section": "Sampling Distribution of the Difference in Sample Means",
-    "text": "Sampling Distribution of the Difference in Sample Means\nIf we are sampling from independent populations, then \\[\nX_1-X_2 \\sim \\text { Normal }\\left(\\mu_1-\\mu_2, S E=\\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\\right)\n\\]\nThis will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( \\(n \\geq 30\\) ) samples from non-normal populations thanks to CLT.\n\nTwo-sample Z statistic\nIf we are sampling from independent populations, and doing inference on \\(\\mu_1-\\mu_2=\\delta\\) then the two sample \\(Z\\)-statistic is given by: \\[\nZ=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{\\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}}\n\\] follows a standard normal distribution. This will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( \\(n\\) \\(\\geq 30)\\) samples from non-normal populations thanks to CLT.\n\n\nUnknown Variance\nFollows a t distribution of course, this is for assuming equal variance and t \\(\\sim n_1+n_2-2\\)in addition if unknown if equal variance:\n\nWelch Procedure\nWelch Procedure for the Difference of means for Independent Groups \\(\\left(\\sigma_1^2 \\neq \\sigma_2^2\\right)\\) 1. \\(H_0: \\mu_1-\\mu_2=\\delta_0 \\quad H_A: \\begin{cases}\\mu_1-\\mu_2 \\neq \\delta_0 & \\text { two-sided test } \\\\ \\mu_1-\\mu_2&lt;\\delta_0 & \\text { one-sided (lower-tail) test } \\\\ \\mu_1-\\mu_2&gt;\\delta_0 & \\text { one-sided (upper-tail) test }\\end{cases}\\)\n2. Test Statistic: \\(\\quad T=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{\\sqrt{\\frac{S_1^2}{n_1}+\\frac{S_2^2}{n_2}}} \\sim t_\\nu\\) where \\(\\nu=\\frac{\\left(\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}\\right)^2}{\\frac{1}{n_1-1}\\left(\\frac{s_1^2}{n_1}\\right)^2+\\frac{1}{n_2-1}\\left(\\frac{s_2^2}{n_2}\\right)^2}\\) and \\(s_1^2\\) and \\(s_2^2\\) are the sample variances calculated using: \\[\ns_1^2=\\frac{\\sum_{i=1}^{n_1}\\left(x_{1 i}-\\bar{x}_1\\right)^2}{n_1-1} \\quad s_2^2=\\frac{\\sum_{i=1}^{n_2}\\left(x_{2 i}-\\bar{x}_2\\right)^2}{n_2-1}\n\\]\n\n\n\nPooled t-test for the Difference of means for Independent Groups \\(\\left(\\sigma_1^2=\\sigma_2^2\\right)\\)\n\\(H_0: \\mu_1-\\mu_2=\\delta_0 \\quad H_A: \\begin{cases}\\mu_1-\\mu_2 \\neq \\delta_0 & \\text { two-sided test } \\\\ \\mu_1-\\mu_2&lt;\\delta_0 & \\text { one-sided (lower-tail) test } \\\\ \\mu_1-\\mu_2&gt;\\delta_0 & \\text { one-sided (upper-tail) test }\\end{cases}\\) 2. Test Statistic: \\(\\quad T=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{s_p \\sqrt{\\frac{1}{n_1}+\\frac{1}{n_2}}} \\sim t_\\nu\\) where \\(\\nu=n_1+n_2-2\\) where \\(s_p\\) is the square-root of the pooled variance: \\[\ns_p^2=\\frac{\\left(n_1-1\\right) s_1^2+\\left(n_2-1\\right) s_2^2}{n_1+n_2-2}\n\\]",
+    "text": "Sampling Distribution of the Difference in Sample Means\nIf we are sampling from independent populations, then \\[\nX_1-X_2 \\sim \\text { Normal }\\left(\\mu_1-\\mu_2, S E=\\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\\right)\n\\]\nThis will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( \\(n \\geq 30\\) ) samples from non-normal populations thanks to CLT.\n\nTwo-sample Z statistic\nIf we are sampling from independent populations, and doing inference on \\(\\mu_1-\\mu_2=\\delta\\) then the two sample \\(Z\\)-statistic is given by: \\[\nZ=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{\\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}}\n\\] follows a standard normal distribution. This will be exact when we are sampling from a normal population (even for small sample sizes). This will be approximate for large ( \\(n\\) \\(\\geq 30)\\) samples from non-normal populations thanks to CLT.",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "L15.html#proposition",
+    "href": "L15.html#proposition",
+    "title": "Interference of Two Means",
+    "section": "PROPOSITION",
+    "text": "PROPOSITION\nThe expected value of \\(\\bar{X}-\\bar{Y}\\) is \\(\\mu_1-\\mu_2\\), so \\(\\bar{X}-\\bar{Y}\\) is an unbiased estimator of \\(\\mu_1-\\mu_2\\). The standard deviation of \\(\\bar{X}-\\bar{Y}\\) is \\[\n\\sigma_{\\bar{X}-\\bar{Y}}=\\sqrt{\\frac{\\sigma_1^2}{m}+\\frac{\\sigma_2^2}{n}}\n\\]\nProof: Based on independents, easy to think of \\(V(X-Y) = V(X)+V(Y)\\)",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "L15.html#welch-theorem",
+    "href": "L15.html#welch-theorem",
+    "title": "Interference of Two Means",
+    "section": "Welch THEOREM",
+    "text": "Welch THEOREM\nWhen the population distributions are both normal, the standardized variable \\[\nT=\\frac{\\bar{X}-\\bar{Y}-\\left(\\mu_1-\\mu_2\\right)}{\\sqrt{\\frac{S_1^2}{m}+\\frac{S_2^2}{n}}}\n\\] has approximately a \\(t\\) distribution with df \\(v\\) estimated from the data by \\[\nv=\\frac{\\left(\\frac{s_1^2}{m}+\\frac{s_2^2}{n}\\right)^2}{\\frac{\\left(s_1^2 / m\\right)^2}{m-1}+\\frac{\\left(s_2^2 / n\\right)^2}{n-1}}=\\frac{\\left[\\left(s e_1\\right)^2+\\left(s e_2\\right)^2\\right]^2}{\\frac{\\left(s e_1\\right)^4}{m-1}+\\frac{\\left(s e_2\\right)^4}{n-1}}\n\\] where \\[\ns e_1=\\frac{s_1}{\\sqrt{m}} \\quad s e_2=\\frac{s_2}{\\sqrt{n}}\n\\]\n\nUnknown Variance\nFollows a t distribution of course, this is for assuming equal variance and t \\(\\sim n_1+n_2-2\\)in addition if unknown if equal variance:\n\nWelch Procedure\nWelch Procedure for the Difference of means for Independent Groups \\(\\left(\\sigma_1^2 \\neq \\sigma_2^2\\right)\\) 1. \\(H_0: \\mu_1-\\mu_2=\\delta_0 \\quad H_A: \\begin{cases}\\mu_1-\\mu_2 \\neq \\delta_0 & \\text { two-sided test } \\\\ \\mu_1-\\mu_2&lt;\\delta_0 & \\text { one-sided (lower-tail) test } \\\\ \\mu_1-\\mu_2&gt;\\delta_0 & \\text { one-sided (upper-tail) test }\\end{cases}\\)\n2. Test Statistic: \\(\\quad T=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{\\sqrt{\\frac{S_1^2}{n_1}+\\frac{S_2^2}{n_2}}} \\sim t_\\nu\\) where \\(\\nu=\\frac{\\left(\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}\\right)^2}{\\frac{1}{n_1-1}\\left(\\frac{s_1^2}{n_1}\\right)^2+\\frac{1}{n_2-1}\\left(\\frac{s_2^2}{n_2}\\right)^2}\\) and \\(s_1^2\\) and \\(s_2^2\\) are the sample variances calculated using: \\[\ns_1^2=\\frac{\\sum_{i=1}^{n_1}\\left(x_{1 i}-\\bar{x}_1\\right)^2}{n_1-1} \\quad s_2^2=\\frac{\\sum_{i=1}^{n_2}\\left(x_{2 i}-\\bar{x}_2\\right)^2}{n_2-1}\n\\]\n\n\n\nPooled t-test for the Difference of means for Independent Groups \\(\\left(\\sigma_1^2=\\sigma_2^2\\right)\\)\n\\(H_0: \\mu_1-\\mu_2=\\delta_0 \\quad H_A: \\begin{cases}\\mu_1-\\mu_2 \\neq \\delta_0 & \\text { two-sided test } \\\\ \\mu_1-\\mu_2&lt;\\delta_0 & \\text { one-sided (lower-tail) test } \\\\ \\mu_1-\\mu_2&gt;\\delta_0 & \\text { one-sided (upper-tail) test }\\end{cases}\\) 2. Test Statistic: \\(\\quad T=\\frac{\\bar{X}_1-\\bar{X}_2-\\delta}{s_p \\sqrt{\\frac{1}{n_1}+\\frac{1}{n_2}}} \\sim t_\\nu\\) where \\(\\nu=n_1+n_2-2\\) where \\(s_p\\) is the square-root of the pooled variance: \\[\ns_p^2=\\frac{\\left(n_1-1\\right) s_1^2+\\left(n_2-1\\right) s_2^2}{n_1+n_2-2}\n\\]",
+    "crumbs": [
+      "Home",
+      "STAT205",
+      "Interference of Two Means"
+    ]
+  },
+  {
+    "objectID": "L15.html#examples",
+    "href": "L15.html#examples",
+    "title": "Interference of Two Means",
+    "section": "Examples:",
+    "text": "Examples:\nchicken beans:\n\nsoy meal: \\(\\bar{x_1}= 246.43, s_1 =54.13, n_1=14\\)\nmeat meal: \\(\\bar{x_2}=276.91,s_2=64.9, n_2=11\\)",
     "crumbs": [
       "Home",
       "STAT205",
@@ -380,73 +452,73 @@
   {
     "objectID": "Q1-2.html",
     "href": "Q1-2.html",
-    "title": "Q1-2",
+    "title": "Q1-4",
     "section": "",
     "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
     "crumbs": [
       "Home",
       "Interviews",
-      "Q1-2"
+      "Q1-4"
     ]
   },
   {
     "objectID": "Q1-2.html#quant-interview-questions",
     "href": "Q1-2.html#quant-interview-questions",
-    "title": "Q1-2",
+    "title": "Q1-4",
     "section": "",
     "text": "Acknowledgement: Questions are from 150-Most-Frequently-Asked-Questions-on-Quant-Interview",
     "crumbs": [
       "Home",
       "Interviews",
-      "Q1-2"
+      "Q1-4"
     ]
   },
   {
     "objectID": "Q1-2.html#q1",
     "href": "Q1-2.html#q1",
-    "title": "Q1-2",
+    "title": "Q1-4",
     "section": "Q1",
     "text": "Q1\nPut options with strikes 30 and 20 on the same underlying asset and with the same maturity are trading for $6 and $4, respectively. Can you find an arbitrage?\nAnswer:- CFA I, key words:option, portfolio,strike",
     "crumbs": [
       "Home",
       "Interviews",
-      "Q1-2"
+      "Q1-4"
     ]
   },
   {
     "objectID": "Q1-2.html#q2",
     "href": "Q1-2.html#q2",
-    "title": "Q1-2",
+    "title": "Q1-4",
     "section": "Q2",
     "text": "Q2\nThe number \\(2^{29}\\) has 9 digits, all different. Without computing \\(2^{29}\\), find the missing digit.\nAnswer:- Key words: Combinations theory, number theory, recall:\n\\[\n9 \\mid n- D(n)\n\\] which sum of all its digits is divisible by 9, thus we have:\n\\[\n9 \\mid 2^{29}- D(2^{29})\n\\]\n\\[\n9 \\mid \\sum_{j=0}^9 j -D(2^{29})\n\\]",
     "crumbs": [
       "Home",
       "Interviews",
-      "Q1-2"
+      "Q1-4"
     ]
   },
   {
     "objectID": "Q1-2.html#q3-tower-rule",
     "href": "Q1-2.html#q3-tower-rule",
-    "title": "Q1-2",
+    "title": "Q1-4",
     "section": "Q3 Tower Rule",
     "text": "Q3 Tower Rule\nException of \\(\\Phi(X+a)\\), assume another \\(Y\\sim N(0,1)\\), such that \\(\\Phi(X+a)= P(Y&lt;X+a)\\) , take its expectation:\n\\[\nE_x(\\Phi(X+a)) = E_x(P(Y&lt;X+a)|x)\n\\]\nSince X,Y are independent, we can apply the tower rule:\n\\[\n\\begin{align}\n=P(Y&lt;X+a)=P(Y-X&lt;a)\\\\ =P(\\frac{Y-X}{\\sqrt 2} &lt; \\frac{a}{\\sqrt 2} ) \\\\\n= \\Phi(\\frac{a}{\\sqrt{2}})\n\\end{align}\n\\]",
     "crumbs": [
       "Home",
       "Interviews",
-      "Q1-2"
+      "Q1-4"
     ]
   },
   {
     "objectID": "Q1-2.html#q4-throw-coins-dices",
     "href": "Q1-2.html#q4-throw-coins-dices",
-    "title": "Q1-2",
+    "title": "Q1-4",
     "section": "Q4 Throw Coins, dices",
     "text": "Q4 Throw Coins, dices\nThrow coins can be converted to a markov chain question, Expected step to recurrent states\ndraw a graph solving this: Expected number of throwing HHH sequence:\n\\[\n\\begin{align}\nu_0=0.5(1+u_0)+0.5(1+u_1)=1+0.5u_0+0.5u_1 \\\\\nu_1 =0.5(1+u_0)+0.5(1+u_2)\\\\\nu_2 = 0.5(1+u_0+0.5)\n\\end{align}\n\\]\nNote, u_0 are steps from that state to the recurrent state.\nTo understand this, think about u_0 first, 0.5(1+u_0) means, there’s 0.5 chance the first throw is not H, hence waste this step, and plus itself step u_0, and 0.5(1+u_1) is assuming the first toss is H already, we are remaining u_1 step, due to 0.5+0.5 =1 has to be, there’s no terms for u_2.\n\nDices\nExpected sum for throwing 6 side dices, until the first 1 is appear.\nthoughts: Dice is a discrete uniform distribution. Using Law of total expectation could find the expected tosses of getting a 1:\n\\[\nE = \\frac{1}{6}*0+ \\frac{5}{6}(1+E) = 5\n\\]\n5/6 chance to throw not a 1, 1/6 chance to throw 1 at the first time.\n\\[\nE(sum) = 5 * \\frac{2+3+4+5+6}{5}+1=21\n\\]\nfirst term indicate the expected sum on the mean 5 tosses not getting a 1 ,plus 1 indicate the 1 toss that get a 1.",
     "crumbs": [
       "Home",
       "Interviews",
-      "Q1-2"
+      "Q1-4"
     ]
   },
   {
@@ -466,7 +538,7 @@
     "href": "BrownBridge.html",
     "title": "Brown Bridge",
     "section": "",
-    "text": "Let \\(B_t\\) be standard Brownian motion, find the conditional distribution \\(B_s|B_t\\) for \\(0&lt;s&lt;t\\) .\nIf \\(B_s\\) is known, \\(B_t \\sim N(?,?)\\),consider the increment(Note they are independent):\n\\[\n\\begin{align*}\nB_t &= B_s + (B_t - B_s) \\\\\nE(B_t) &= E(B_s) + E(B_t - B_s | B_s) = B_s \\\\\nVar(B_t) &= E(B^2_t) - (E(B_t))^2 \\\\\n&= E\\left(B^2_s + (B_t - B_s)^2 + 2B_s(B_t - B_s)\\right) - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) + 0 - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) \\\\\n&= B_s^2 + (t - s) = t-s\n\\end{align*}\n\\]\nWhereas Brown Bridge is when \\(B_t\\) known\n\\[\nhh\n\\]",
+    "text": "Let \\(B_t\\) be standard Brownian motion, find the conditional distribution \\(B_s|B_t\\) for \\(0&lt;s&lt;t\\) .\nIf \\(B_s\\) is known, \\(B_t \\sim N(?,?)\\),consider the increment(Note they are independent):\n\\[\n\\begin{align*}\nB_t &= B_s + (B_t - B_s) \\\\\nE(B_t) &= E(B_s) + E(B_t - B_s | B_s) = B_s \\\\\nVar(B_t) &= E(B^2_t) - (E(B_t))^2 \\\\\n&= E\\left(B^2_s + (B_t - B_s)^2 + 2B_s(B_t - B_s)\\right) - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) + 0 - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) \\\\\n&= B_s^2 + (t - s) = t-s\n\\end{align*}\n\\]\nWhereas Brown Bridge is when \\(B_t\\) known，assume it:\n\\[\n\\begin{align}\nB_s = B_s-\\lambda B_t+ \\lambda B_t \\\\ Cov(B_t-\\lambda B_t,B_t) = 0 = s-\\lambda t,\\lambda = \\frac{s}{t} \\\\ B_s = B_s- \\frac{sB_t}{t} + \\frac{sB_t}{t}\n\\end{align}\n\\]\nwhich shows that \\(B_s - \\frac{sB_t}{t}\\)is independent with \\(B_t\\)\n\\[\nE(B_s|B_t) = E(B_s-\\frac{sB_t}{t}|B_t)+ \\frac{sB_t}{t}=\\frac{s}{t} B_t\n\\]\nBy law of total expectation.\nCompute its variance:\n\\[\nVar(B_s|B_t) = Var( B_s-\\frac{s}{t}B_t |B(t)) = Var(B_s-\\frac{s}{t}B_t), \\text{as independence}\n\\]\n$$\n$$",
     "crumbs": [
       "Home",
       "Interviews",
@@ -478,7 +550,7 @@
     "href": "BrownBridge.html#question",
     "title": "Brown Bridge",
     "section": "",
-    "text": "Let \\(B_t\\) be standard Brownian motion, find the conditional distribution \\(B_s|B_t\\) for \\(0&lt;s&lt;t\\) .\nIf \\(B_s\\) is known, \\(B_t \\sim N(?,?)\\),consider the increment(Note they are independent):\n\\[\n\\begin{align*}\nB_t &= B_s + (B_t - B_s) \\\\\nE(B_t) &= E(B_s) + E(B_t - B_s | B_s) = B_s \\\\\nVar(B_t) &= E(B^2_t) - (E(B_t))^2 \\\\\n&= E\\left(B^2_s + (B_t - B_s)^2 + 2B_s(B_t - B_s)\\right) - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) + 0 - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) \\\\\n&= B_s^2 + (t - s) = t-s\n\\end{align*}\n\\]\nWhereas Brown Bridge is when \\(B_t\\) known\n\\[\nhh\n\\]",
+    "text": "Let \\(B_t\\) be standard Brownian motion, find the conditional distribution \\(B_s|B_t\\) for \\(0&lt;s&lt;t\\) .\nIf \\(B_s\\) is known, \\(B_t \\sim N(?,?)\\),consider the increment(Note they are independent):\n\\[\n\\begin{align*}\nB_t &= B_s + (B_t - B_s) \\\\\nE(B_t) &= E(B_s) + E(B_t - B_s | B_s) = B_s \\\\\nVar(B_t) &= E(B^2_t) - (E(B_t))^2 \\\\\n&= E\\left(B^2_s + (B_t - B_s)^2 + 2B_s(B_t - B_s)\\right) - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) + 0 - B_s^2 \\\\\n&= B_s^2 + E((B_t - B_s)^2) \\\\\n&= B_s^2 + (t - s) = t-s\n\\end{align*}\n\\]\nWhereas Brown Bridge is when \\(B_t\\) known，assume it:\n\\[\n\\begin{align}\nB_s = B_s-\\lambda B_t+ \\lambda B_t \\\\ Cov(B_t-\\lambda B_t,B_t) = 0 = s-\\lambda t,\\lambda = \\frac{s}{t} \\\\ B_s = B_s- \\frac{sB_t}{t} + \\frac{sB_t}{t}\n\\end{align}\n\\]\nwhich shows that \\(B_s - \\frac{sB_t}{t}\\)is independent with \\(B_t\\)\n\\[\nE(B_s|B_t) = E(B_s-\\frac{sB_t}{t}|B_t)+ \\frac{sB_t}{t}=\\frac{s}{t} B_t\n\\]\nBy law of total expectation.\nCompute its variance:\n\\[\nVar(B_s|B_t) = Var( B_s-\\frac{s}{t}B_t |B(t)) = Var(B_s-\\frac{s}{t}B_t), \\text{as independence}\n\\]\n$$\n$$",
     "crumbs": [
       "Home",
       "Interviews",
@@ -526,7 +598,19 @@
     "href": "Simulations.html#poisson-process",
     "title": "CourseSimulatioinExamples",
     "section": "Poisson Process",
-    "text": "Poisson Process",
+    "text": "Poisson Process\n\nlambda_t &lt;- function(t) { 5 + 3 * sin(pi * t) } # example intensity function\nT &lt;- 1\nlambda_max &lt;- 8 # an upper bound for the intensity\n\n# Step 2: Simulate a homogeneous Poisson process with rate λ_max\nset.seed(403) # Ensuring reproducibility\nN &lt;- rpois(1, lambda_max * T)\ncandidate_times &lt;- sort(runif(N, 0, T))\n\n# Step 3: Thin the events\naccepted_times &lt;- candidate_times[sapply(candidate_times, function(t) {\n  U &lt;- runif(1)\n  U &lt; lambda_t(t) / lambda_max\n})]\n\n# Building the plot arrays correctly\ntimes &lt;- c(0, accepted_times, T)\nsteps &lt;- 0:(length(accepted_times)+1)\n\n# Plot the simulated Poisson process\nplot(times, steps, type='s', xlab='Time', ylab='Number of Events', \n     main='Nonhomogeneous Poisson Process Simulation')",
+    "crumbs": [
+      "Home",
+      "STAT403",
+      "CourseSimulatioinExamples"
+    ]
+  },
+  {
+    "objectID": "Simulations.html#mcmc",
+    "href": "Simulations.html#mcmc",
+    "title": "CourseSimulatioinExamples",
+    "section": "MCMC",
+    "text": "MCMC\n\nset.seed(403-560)\ng=function(x) exp(x-x^2/2-exp(x))\nfn &lt;- function(x) {\ncon=integrate(g, lower = -Inf, upper = Inf )$value\nreturn(g(x)/con)}\nmcX=0.5\nfor(i in 1:10000){\nx.temp=rnorm(1,mcX[i],1)\nu=runif(1)\np.acc=min(1,g(x.temp)/g(mcX[i]))\nif(u&lt;p.acc) mcX=c(mcX,x.temp)\nif(u&gt;=p.acc) mcX=c(mcX,mcX[i])}\nhist(mcX, freq = FALSE,ylim=c(0,0.6))\ncurve(fn, -5, 5, add = TRUE, col = \"red\")",
     "crumbs": [
       "Home",
       "STAT403",
@@ -538,7 +622,7 @@
     "href": "Simulations.html#brownian-motion",
     "title": "CourseSimulatioinExamples",
     "section": "Brownian Motion",
-    "text": "Brownian Motion",
+    "text": "Brownian Motion\n\nrm(list=ls())\n#Simulating  Geometric Brownian motion (GMB)\ntau &lt;- 1 #time to expiry\nN &lt;- 1000 #number of sub intervals\ndt &lt;- tau/N #length of each time sub interval\ntime &lt;- seq(from=0, to=tau, by=dt) #time moments in which we simulate the process\nlength(time) #it should be N+1\n\n[1] 1001\n\nmu &lt;- 0.05 #GBM parameter 1\nsigma &lt;- 0.9 #GBM parameter 2\nX0 &lt;- 10 #initial condition\n\n#simulate 1 Geometric Brownian motion path\nZ &lt;- rnorm(N, mean = 0, sd = 1) #standard normal sample of N elements\ndW &lt;- Z*sqrt(dt) #Brownian motion increments\nW &lt;- c(0, cumsum(dW)) #Brownian motion at each time instant N+1 elements\n\n\n#Analytic solution\nX_analytic &lt;- numeric(N+1) #vector of zeros, N+1 elements\nX_analytic[1] &lt;- X0 #first element of X_analytic is X0. with the for loop we find the other N elements\n\nfor(i in 2:length(X_analytic)){\n  X_analytic[i] &lt;- X_analytic[1]*exp(mu - 0.5*sigma^2*i*dt + sigma*W[i-1])\n}\n\n#plot X against time\nplot(time, X_analytic, type = \"l\", main = \"GBM path with analytical solution\", \n     xlab = expression(\"t\"[i]), ylab = expression(\"W\"[t[i]]))\n\n\n\n\n\n\n\n#Euler-Maruyama scheme\nX_EM &lt;- numeric(N+1) #vector of zeros, N+1 elements\nX_EM[1] &lt;- X0 #first element of X_EM is X0. with the for loop we find the other N elements\n\nfor(i in 2:length(X_EM)){\n  X_EM[i] &lt;- X_EM[i-1] + mu*X_EM[i-1]*dt + sigma*dW[i-1]\n}\n\n#plot X against time\nplot(time, X_EM, type = \"l\", main = \"GBM path with Euler-Maruyama scheme\", \n     xlab = expression(\"t\"[i]), ylab = expression(\"W\"[t[i]]))\n\n\n\n\n\n\n\n#plot W against time\nmatplot(time, cbind(X_analytic, X_EM), type = \"l\", main = \"GBM\", \n        xlab = expression(\"t\"[i]), ylab = expression(\"X\"[t[i]]))\n\n\n\n\n\n\n\n\nExample 16.9. Let \\(Z_0, Z_1, \\ldots\\), be a series of independent standard normal random variables. The infinite series \\[\nB(t)=\\frac{t}{\\sqrt{\\pi}} Z_0+\\sqrt{\\frac{2}{\\pi}} \\sum_{m=1}^{\\infty} \\frac{\\sin (m t)}{m} Z_m, \\quad 0 \\leq t \\leq 1,\n\\] is a Brownian motion for \\(0 \\leq t \\leq 1\\). Try to simulate a Brownian motion stochastic process, at least approximately, by using finite sums of the form \\[\nB_N(t)=\\frac{t}{\\sqrt{\\pi}} Z_0+\\sqrt{\\frac{2}{\\pi}} \\sum_{m=1}^N \\frac{\\sin (m t)}{m} Z_m, \\quad 0 \\leq t \\leq 1\n\\]\n\nz1=rnorm(10000);\nB1=function(t, N=1000) \nt*z1[N+1]/sqrt(pi)+sqrt(2/pi)*sum(z1[1:N]*sin(t*c(1:N))/(c(1:N))) \npar(mar = c(0, 0, 0, 0)+2) \nplot(1,1,col=\"white\",xlim=c(0,1),ylim=c(-1,1 ) )\ny=0\nfor(i in 1:1000){\ny1=B1(i/1000); \nsegments((i-1)/1000,y,i/1000,y1,col=\"blue\")\ny=y1;\n}",
     "crumbs": [
       "Home",
       "STAT403",

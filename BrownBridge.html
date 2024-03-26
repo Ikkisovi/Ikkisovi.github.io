@@ -254,7 +254,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./CramerRaoLowerBound.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cramér–Rao Lower Bound</span></a>
+ <span class="menu-text">Cramer Rao Lower Bound</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -277,7 +277,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Q1-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Q1-2</span></a>
+ <span class="menu-text">Q1-4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -345,10 +345,23 @@ Var(B_t) &amp;= E(B^2_t) - (E(B_t))^2 \\
 &amp;= B_s^2 + (t - s) = t-s
 \end{align*}
 \]</span></p>
-<p>Whereas Brown Bridge is when <span class="math inline">\(B_t\)</span> known</p>
+<p>Whereas Brown Bridge is when <span class="math inline">\(B_t\)</span> known，assume it:</p>
 <p><span class="math display">\[
-hh
+\begin{align}
+B_s = B_s-\lambda B_t+ \lambda B_t \\ Cov(B_t-\lambda B_t,B_t) = 0 = s-\lambda t,\lambda = \frac{s}{t} \\ B_s = B_s- \frac{sB_t}{t} + \frac{sB_t}{t}
+\end{align}
 \]</span></p>
+<p>which shows that <span class="math inline">\(B_s - \frac{sB_t}{t}\)</span>is independent with <span class="math inline">\(B_t\)</span></p>
+<p><span class="math display">\[
+E(B_s|B_t) = E(B_s-\frac{sB_t}{t}|B_t)+ \frac{sB_t}{t}=\frac{s}{t} B_t
+\]</span></p>
+<p>By law of total expectation.</p>
+<p>Compute its variance:</p>
+<p><span class="math display">\[
+Var(B_s|B_t) = Var( B_s-\frac{s}{t}B_t |B(t)) = Var(B_s-\frac{s}{t}B_t), \text{as independence}
+\]</span></p>
+<p>$$</p>
+<p>$$</p>
 
 
 </section>
